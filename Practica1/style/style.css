@@ -50,6 +50,8 @@
   width: 1010px;
   height: 450px;
   margin-top: 30px;
+  border-radius: 3%;
+  border:solid #0D7C66 ;
   
 
 }
@@ -65,12 +67,40 @@
 
 .sobre p{
   margin: auto;
+  margin-left: 30px;
 }
+
+
+
+
+
+
 
 .acti{
   background-color: #BDE8CA;
   width: 1010px;
-  height: 450px;
+  height: 900px;
   margin: auto;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+  border:solid #0D7C66 ;
 }
+
+.acti iframe {
+  margin: auto;
+}
+
+.acti h1 {
+  margin: auto;
+}
+
+.acti p {
+  margin: auto;
+}
+
+.acti h3 {
+  margin: auto;
+}
+
