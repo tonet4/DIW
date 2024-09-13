@@ -8,8 +8,26 @@
     margin: 0; /* Elimina los márgenes del body */
     padding: 0; /* Elimina el relleno del body */
     background-image: url(../image/fondo_bici.jpg);
+    
   }
 
+ 
+
+  section{
+    scroll-padding-top: 600px;
+  }
+
+.tituloPrincipal {
+  background-color:#BDE8CA;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 30px;
+  color: #0D7C66;
+  font-weight: bold;
+}
 
 .barra {
   display: flex;
@@ -18,6 +36,10 @@
   gap: 20px;
   background-color:#BDE8CA;
   height: 100px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
 }
 
@@ -30,7 +52,7 @@
   font-size: 17px;
   cursor:pointer;
   border-radius: 0.75em;
-  background-color: #0D7C66;
+  background-color: #41B3A2;
   box-sizing: border-box;
   color: rgb(0, 0, 0);
   width: 200px;
@@ -38,7 +60,7 @@
 
 .imagCiclo {
   width: 100%;
-  height: 720px;
+  height: auto;
 }
 
 .sobre {
@@ -46,61 +68,209 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin: auto;
-  width: 1010px;
-  height: 450px;
-  margin-top: 30px;
-  border-radius: 3%;
-  border:solid #0D7C66 ;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 2%;
+  border:solid #41B3A2 ;
+  margin-right: 170px;
+  margin-left: 170px;
+  margin-top: 60px;
   
+  flex-wrap: wrap;
 
 }
 
 
 .sobre img {
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  margin-left: 10px;
+  width: 450px;
+  height: 450px;
   
+  object-fit: cover;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
 }
 
 .sobre p{
   margin: auto;
-  margin-left: 30px;
+  text-align: left;
+  
 }
 
-
+.titulo_sobre{
+  font: bold;
+  color: #41B3A2;
+  font-size: 18px;
+  text-decoration: underline;
+}
 
 
 
 
 
 .acti{
+  border:solid #41B3A2 ;
   background-color: #BDE8CA;
-  width: 1010px;
-  height: 900px;
-  margin: auto;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-right: 170px;
+  margin-left: 170px;
+  padding-top: 30px;
+  margin-top: 60px;
+  padding-bottom: 30px;
   border-radius: 3%;
-  border:solid #0D7C66 ;
+  max-width: 100%;
+ 
 }
 
-.acti iframe {
-  margin: auto;
-}
+
 
 .acti h1 {
-  margin: auto;
-}
-
-.acti p {
-  margin: auto;
+  margin-bottom: 15px;
+  font: bold;
+  color: #41B3A2;
+  text-decoration: underline;
 }
 
 .acti h3 {
-  margin: auto;
+  margin-bottom: 15px;
+}
+
+.acti p{
+  margin-bottom: 15px;
+}
+
+.acti .texto1{
+  margin: 20px;
+}
+
+.acti iframe {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+
+}
+
+
+
+.etapas {
+  border:solid #41B3A2 ;
+  background-color: #BDE8CA;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-right: 170px;
+  margin-left: 170px;
+  padding-top: 30px;
+  margin-top: 60px;
+  padding-bottom: 30px;
+  border-radius: 3%;
+}
+
+
+.etapas p{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+.video-container {
+  border: solid #41B3A2;
+  background-color: #BDE8CA;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-right: 170px;
+  margin-left: 170px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-radius: 3%;
+  display: flex; /* Add this */
+  justify-content: center; /* Add this */
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+
+.tituloVideo {
+  font: bold;
+  color: #41B3A2;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+/* 
+------------------------------------
+-------------FOOTER-----------------
+------------------------------------
+
+Estilo general del footer */
+footer {
+  background-color: #0D7C66;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 15px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+/* Estilo de los enlaces sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Estilo de la parte inferior del footer */
+.footer-bottom {
+  background-color: #222;
+  padding: 10px;
+  font-size: 14px;
 }
 
