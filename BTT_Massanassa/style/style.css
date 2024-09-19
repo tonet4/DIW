@@ -35,6 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  height: auto;
 
 }
 
@@ -130,9 +131,36 @@ header {
 /********************************************************************
 *************************E S L O G A N**************************************
 *********************************************************************/
+.contenido-eslogan{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 50px 0;
 
+}
 
+.contenido-eslogan h2{
+  color: var(--clr2);
+  font-size: 40px;
+  text-transform: uppercase;
+  
 
+}
+
+.contenido-eslogan a{
+  text-decoration: none;
+  color:var(--clr1);
+  border: 1px solid 40px;
+  padding: 20px 40px;
+  transition: 0.4s;
+  display: inline;
+}
+
+.contenido-eslogan a:hover{
+  background-color: var(--clr2);
+  
+}
 
 
 /********************************************************************
@@ -146,7 +174,15 @@ header {
   .left-menu {
       display: none;
   }
+
+  .buscador {
+    display: none;
+
+  }
+  
 }
+
+
 
 @media (max-width: 50px) {
   
