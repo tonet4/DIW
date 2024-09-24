@@ -1,0 +1,113 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor{
+    margin: 50px 420px;
+    border: 3px solid #000000;
+    padding: 5px;
+    background-color: rgb(212, 210, 210);
+}
+
+.titulo{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.menu{
+    display: flex;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.lineaVertical{
+    border-left: 2px solid rgb(0, 0, 0);
+  height: 21px;
+
+}
+
+.fecha1{
+    margin-left: 15px;
+}
+
+.linea {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 20px 10px;
+  }
+
+.seccion1{
+    display: flex;
+    gap: 40px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.seccion1 h3{
+    font-weight: bold;
+    
+}
+
+.caja1{
+    padding: 10px;
+    background-color: rgb(182, 177, 177);
+    width: 520px;
+    height: 200px;
+}
+
+.caja1 p{
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.caja2 ul{
+    list-style: none;
+}
+
+.listado1{
+    padding-left: 15px;
+}
+
+.acercade{
+    padding-top: 10px;
+}
+
+.listado2{
+    padding-left: 20px;
+}
+
+.fecha2{
+    margin-left: 15px;
+    padding-top: 10px;
+}
+
+.seccion2{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.caja3{
+    padding: 10px;
+    background-color: rgb(182, 177, 177);
+    width: 520px;
+    height: 200px;
+}
+
+.caja3 p{
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.derechos{
+    text-align: center;
+    padding-bottom: 10px;
+}
