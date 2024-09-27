@@ -1,0 +1,33 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th,td,tr{
+    border: 1px solid black;
+    margin: 25px;
+    padding: 15px;
+}
+
+th{
+    background-image: url(../img/fondo_gris.gif);
+    background-size: cover;
+}
+
+
+table td:first-child{
+    background-color: #E6F3FF;
+}
+
+table tr:nth-child(2){
+    background-color: #FFFFCC;
+}
+
+table tr:nth-child(4){
+    background-color: #FFFFCC;
+}
+
+table tr:hover{
+    background-color: #FFFF66;
+}
