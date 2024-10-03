@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../Imagenes/old_map.png);
+}
+
+.fondo{
+    margin: 10px;
+}
+
+/*H E A D E R*/
+
+.titulo{
+    background-color: #313b44;
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    padding: 10px 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+#titulo{
+    color: white;
+    font-weight: 1000;
+}
+
+.linea {
+    border-top: 10px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+.cabecera{
+    background-image: url(../Imagenes/red015.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cabecera-contenidos{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cabecera-contenidos img {
+    width: 64px; 
+    height: 64px; 
+  
+}
+
+.cabecera-contenidos a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  
+}
