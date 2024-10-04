@@ -6,10 +6,11 @@
 
 body{
     background-image: url(../Imagenes/old_map.png);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .fondo{
-    margin: 10px;
+    margin: 15px;
 }
 
 /*H E A D E R*/
@@ -19,12 +20,13 @@ body{
     display: flex;
     justify-content: flex-start;
     height: 100px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     gap: 30px;
     align-items: center;
+    
 }
 
-#titulo{
+.titulo h1{
     color: white;
     font-weight: 1000;
 }
@@ -61,5 +63,62 @@ body{
     text-align: center;
     text-decoration: none;
     color: white;
+    
   
+}
+
+#color{
+    color: yellow;
+}
+
+/* S E C T I O N */
+
+.seccion1{
+    background-image: url(../Imagenes/lgrey008.jpg);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 40px 30px;
+    gap: 100px;
+    flex-wrap: nowrap;
+}
+
+.seccion1-cajas{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid;
+    align-items: center;
+    width: 270px;
+    
+}
+
+.linea2 {
+    width: 95%; /* Ajustar el ancho de la línea */
+    border-top: 2px solid rgb(171, 163, 163); /* Hacer la línea visible */
+    margin-top: 10px;
+}
+.seccion1-cajas img{
+    padding: 20px 20px;
+}
+
+.seccion1-cajas p{
+    text-align: center;
+    padding: 0 10px;
+    padding-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* F O O T E R */
+footer{
+    background-color: #313b44;
+    text-align: center;
+    color: white;
+    font-size: 0.7em;
+}
+
+footer p{
+    padding: 10px 0;
 }
