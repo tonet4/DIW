@@ -4,3 +4,103 @@
     padding: 0;
 }
 
+body{
+    background-color: #5d9ea4;
+}
+
+.container{
+    border: 1px solid black;
+    padding:20px;
+    background-color: white;
+    margin: 50px 300px;
+    height: auto;
+}
+
+.linea{
+    border-top: 5px solid #c4ceca;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#titulo{
+    padding-bottom: 20px 0;
+    text-align: center;
+}
+
+#bloque1{
+    padding: 20px 0;
+}
+
+.contenedor1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+.contenedor1 p{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+    
+
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor2 p{
+    width: 95%;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 9px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#final{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#caja3, #caja4, #caja5{
+    border-radius: 15px;
+}
+
+#caja2, #caja6{
+    border-radius: 5px;
+}
+
+#caja1{
+    border-radius: 15px 20px 5px 50px;
+}
+
+#caja10{
+    background-color: #6ba7a8;
+    background-image: linear-gradient(to left, #6ba7a8 , #f6fafd)
+}
+
+#caja4{
+    background-color: #6ba7a8;
+    background-image: radial-gradient(#f6fafd, #e0eef3, #6ba7a8 );
+}
+
+#caja3{
+    background-color: #6ba7a8;
+    background-image: linear-gradient(180deg, white, #6ba7a8);
+}
