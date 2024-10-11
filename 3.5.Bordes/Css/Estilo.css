@@ -27,6 +27,7 @@ body{
 #titulo{
     padding-bottom: 20px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #bloque1{
@@ -47,7 +48,7 @@ body{
     margin-bottom: 15px;
     border: 1px solid black;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -67,7 +68,7 @@ body{
     margin-bottom: 15px;
     border: 1px solid black;
     text-align: center;
-    padding: 9px;
+    padding: 10px;
     border-radius: 15px;
     font-weight: bold;
     font-size: 22px;
@@ -103,4 +104,16 @@ body{
 #caja3{
     background-color: #6ba7a8;
     background-image: linear-gradient(180deg, white, #6ba7a8);
+}
+
+#caja9{
+    text-shadow: 2px 2px 5px black;
+}
+
+#caja7{
+    box-shadow: 5px 5px 5px #6ba7a8;
+}
+
+#bloque1, #bloque2{
+    font-weight: bold;
 }
