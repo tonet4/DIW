@@ -66,6 +66,9 @@ nav section a {
     text-align: center;
     text-decoration: none;
     color: yellow;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 nav section a:hover {
@@ -73,7 +76,7 @@ nav section a:hover {
 }
 
 section:nth-child(4) {
-    background-image: url(../Imagenes/lgrey008.jpg);
+    background-color: white;
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -93,29 +96,37 @@ article {
     background-color: white;
     border: 1px solid;
     align-items: center;
-    width: 270px;
-    height: 480px;
+    max-width: 270px;
+    height: 590px;
     
-    /* Propiedades del borde */
-    border-width: 20px; /* Ajusta el grosor del borde a tu preferencia */
-    border-style: solid;
+    
     border-image-source: url(../Imagenes/movil.png);
-    
-    /* Define cómo se corta la imagen en las 9 partes para el borde */
-    border-image-slice: 30 30 30 30; /* Ajusta estos valores según las partes de la imagen */
-    border-image-repeat: stretch; /* Estira las partes para que se adapten a los bordes */
+    border-image-slice: 70 20 50 20; 
+    border-width: 70px 20px 50px 20px;
+    border-image-repeat: stretch;
     
 }
 
 article img {
-    padding: 20px 20px;
+    width: 220px;
+}
+
+.js img{
+   background-image: radial-gradient(red, yellow, green);
 }
 
 article p {
     text-align: center;
-    padding: 0 10px;
-    padding-bottom: 20px;
+    padding: 10px 10px;
+    padding-bottom: 10px;
     line-height: 1.7;
+}
+
+
+
+article h3{
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 hr {
