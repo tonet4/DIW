@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    position: relative;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 10px 200px 10px 0;
+    position: relative;
+}
+
+nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    top: 100%; /* Justo debajo del elemento padre */
+    height: 0; /* Comenzamos con altura 0 */
+    overflow: hidden; /* Ocultamos el contenido */
+    
+    transition: height 0.4s ease; /* Animación de altura */
+    border-radius: 3px 3px 0 0; /* Esquinas redondeadas */
+    font-size: 12px;
+    color: #fff;
+}
+
+nav > ul > li > ul {
+    width: 110px;
+    text-align: center;
+}
+
+nav > ul > li:hover > ul {
+    height: 200px; /* Ajusta la altura para mostrar el contenido */
+    width: 110px;
+    text-align: center;
+}
+
+nav > ul > li > ul > li {
+    background-color: rgb(136, 120, 120); 
+    border: 1px solid black;
+    padding: 10px;
+    transition: background-color 0.3s; /* Animación de color de fondo */
+}
+
+nav > ul > li > ul > li:hover {
+    background-color: #444; 
+}
+
+nav > ul > li > ul > li:first-child {
+    margin-top: 25px;
+    position: relative; 
+}
+
+nav ul li ul li:first-child:before {
+    content:' ';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color: #313131;
+    left:50%;
+    top:-10px;
+    margin-left:-5px;
+}
