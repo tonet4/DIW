@@ -1,3 +1,4 @@
+/*Reinicio los valores de la web y ademas pongo la misma fuente para todos*/
 * {
     margin: 0;
     padding: 0;
@@ -5,46 +6,49 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*Marco la posición relative en el nav*/
 nav {
     position: relative;
     margin: 10px;
     margin-left: 30px;
 }
 
+/*Quito los estilos al listado*/
 nav > ul {
     list-style-type: none;
 }
 
+/*Alineo option 1 y option 2 en horizontal y le pongo la posición relative*/
 nav > ul > li {
     display: inline-block;
     margin: 10px 200px 10px 0;
     position: relative;
 }
 
+/*El sub-menú lo pongo en absolut y lo pongo en  "overflow: hidden" para ocultarlo hasta que active el hover*/
 nav > ul > li > ul {
     position: absolute;
     left: 0;
     top: 100%; /* Justo debajo del elemento padre */
     height: 0; /* Comenzamos con altura 0 */
-    overflow: hidden; /* Ocultamos el contenido */
-    
+    width: 110px; /*anchura*/
+    overflow: hidden; /* con estoocultamos el contenido */  
     transition: height 0.4s ease; /* Animación de altura */
     border-radius: 3px 3px 0 0; /* Esquinas redondeadas */
-    font-size: 12px;
-    color: #fff;
-}
-
-nav > ul > li > ul {
-    width: 110px;
+    font-size: 12px; /*Tamaño letra del sub-menú*/
+    color: #fff; /*color letra sub-menú*/
     text-align: center;
 }
 
+
+/*hoever del sub-menú*/
 nav > ul > li:hover > ul {
     height: 200px; /* Ajusta la altura para mostrar el contenido */
-    width: 110px;
+    width: 110px;/*Anchura*/
     text-align: center;
 }
 
+/*Estilo del las opciones del sub-menú*/
 nav > ul > li > ul > li {
     background-color: rgb(136, 120, 120); 
     border: 1px solid black;
@@ -52,15 +56,18 @@ nav > ul > li > ul > li {
     transition: background-color 0.3s; /* Animación de color de fondo */
 }
 
+/*Hoever de las opciones del sub-menú*/
 nav > ul > li > ul > li:hover {
     background-color: #444; 
 }
 
+/*primera opcion de las opciones del sub-menú*/
 nav > ul > li > ul > li:first-child {
     margin-top: 25px;
     position: relative; 
 }
 
+/*Para hacer la flechita*/
 nav ul li ul li:first-child:before {
     content:' ';
     position:absolute;
