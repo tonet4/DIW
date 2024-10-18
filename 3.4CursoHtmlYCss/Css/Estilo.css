@@ -14,16 +14,13 @@ body{
 }
 
 header{
-    background-image: url(../Imagenes/logo.png), linear-gradient(#0379c2, white);
+    background-image:linear-gradient(#0379c2, white);
     display: flex;
     justify-content: flex-start;
     height: 100px;
     padding: 10px 20px;
-    gap: 30px;
+    gap: 10px;
     align-items: center;
-    background-repeat: no-repeat;
-    background-position-x: 3%;
-    background-position-y: 50%;
     border-radius: 15px 15px 0 0;
     box-shadow: 6px 6px 5px #536b6b;
 }
@@ -91,6 +88,7 @@ section:nth-child(4) {
 
 
 article {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -99,6 +97,7 @@ article {
     max-width: 270px;
     height: 590px;
     
+   
     
     border-image-source: url(../Imagenes/movil.png);
     border-image-slice: 70 20 50 20; 
@@ -107,13 +106,49 @@ article {
     
 }
 
-article img {
+article:nth-of-type(1){
+    transform: rotate(-5deg);
+}
+
+article:nth-of-type(3){
+    transform: rotate(5deg);
+}
+
+article:nth-of-type(1) img:nth-child(1) {
+    width: 20px;
+    position: absolute;
+    top: -13%;
+    right: 10%
+}
+
+article img:nth-child(2) {
+    width: 220px;
+    
+}
+
+article:nth-of-type(2) img:nth-child(1) {
+    width: 20px;
+    position: absolute;
+    top: -13%;
+    
+}
+
+article:nth-of-type(2) img:nth-child(2) {
     width: 220px;
 }
 
-.js img{
-   background-image: radial-gradient(red, yellow, green);
+article:nth-of-type(3) img:nth-child(1) {
+    width: 20px;
+    position: absolute;
+    top: -13%;
+    left: 14%
 }
+
+article:nth-of-type(3) img:nth-child(2) {
+    width: 220px;
+}
+
+
 
 article p {
     text-align: center;
