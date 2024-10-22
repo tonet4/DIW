@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso</title>
+    <link rel="stylesheet" href="./Css/Estilo.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <img src="./Imagenes/logo.png" alt="logo">
+            <h1>Curso de HTML5 y CSS3</h1>
+        </header>
+        <nav>
+            <section>
+                <img src="./Imagenes/film.png" alt="contenidos">
+                <a href="">Contenidos</a>
+            </section>
+            <section>
+                <img src="./Imagenes/film.png" alt="contenidos">
+                <a href="">Vídeos</a>
+                <ul>
+                    <li>Vídeos 1</li>
+                    <li>Vídeos 2</li>
+                    <li>Vídeos 3</li>
+                </ul>
+            </section>
+            <section>
+                <img src="./Imagenes/mail.png" alt="contenidos">
+                <a href="">Contacto</a>
+            </section>
+        </nav>
+        <div class="linea"></div>
+        <section>
+            <main>
+                <div id="reproductor">
+                    <video id="medio" width="720" height="400"> <source src="media/trailer.mp4">
+                        <source src="media/trailer.ogg">
+                    </video>
+                    <div id="barra">
+                        <div id="progreso"></div>
+                    </div>
+                </div>
+                <div class="nav2">
+                    <input type="button" id="reiniciar" value="reiniciar">
+                    <input type="button" id="retrasar" value="&laquo;">
+                    <input type="button" id="play" value="&#9658;">
+                    <input type="button" id="adelantar" value="&raquo;">
+                    <input type="button" id="silenciar" value="silenciar">
+                    <label>Volumen</label>
+                    <input type="button" id="menosVolumen" value="-">
+                    <input type="button" id="masVolumen" value="+">
+                </div> 
+            </main>
+        </section>
+        <div class="linea"></div>
+        <footer>
+            <p>HTML5 y CSS3.<br>
+            Diseño de interfaces web - 2DAW </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,17 +4,17 @@
     padding: 0;
 }
 
-body{
+body {
     background-image: linear-gradient(#da5329, white);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.page{
+.page {
     margin: 15px;
 }
 
-header{
-    background-image:linear-gradient(#0379c2, white);
+header {
+    background-image: linear-gradient(#0379c2, white);
     display: flex;
     justify-content: flex-start;
     height: 100px;
@@ -25,7 +25,7 @@ header{
     box-shadow: 6px 6px 5px #536b6b;
 }
 
-header h1{
+header h1 {
     color: white;
     font-weight: 1000;
     padding-left: 8%;
@@ -51,12 +51,13 @@ nav {
 nav section {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 nav section img {
-    width: 64px; 
-    height: 64px; 
-  
+    width: 64px;
+    height: 64px;
+
 }
 
 nav section a {
@@ -69,12 +70,13 @@ nav section a {
 }
 
 nav section a:hover {
-    color: rgb(255, 255, 255);
+    color: white;
+    text-shadow: 1px 1px 0px red;
 }
 
 section:nth-child(4) {
     background-color: white;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
@@ -83,7 +85,81 @@ section:nth-child(4) {
     gap: 100px;
     flex-wrap: nowrap;
     box-shadow: 6px 6px 5px #536b6b;
-  }
+}
+
+
+/* Estilo de los enlaces */
+
+nav section a {
+    text-align: center;
+    text-decoration: none;
+    color: yellow;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav section ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 0;
+    width: 110px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    border-radius: 3px 3px 0 0;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+
+/* Hover del submenú */
+nav section:hover ul {
+    height: auto;
+
+}
+
+/* Estilo de las opciones del submenú */
+nav section ul li {
+    background-color: #e34c26;
+    border: 1px solid black;
+    padding: 10px;
+    transition: background-color 0.3s;
+
+}
+
+
+/* Hover de las opciones del submenú */
+nav section ul li:hover {
+    background-color: #ff7e42;
+
+}
+
+
+/* Primera opción de las opciones del submenú */
+nav section ul li:first-child {
+    margin-top: 25px;
+    position: relative;
+
+}
+
+
+/* Para hacer la flechita */
+nav section ul li:first-child:before {
+    content: ' ';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-bottom-color: #e34c26;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+
+
 
 
 
@@ -96,21 +172,21 @@ article {
     align-items: center;
     max-width: 270px;
     height: 590px;
-    
-   
-    
+
+
+
     border-image-source: url(../Imagenes/movil.png);
-    border-image-slice: 70 20 50 20; 
+    border-image-slice: 70 20 50 20;
     border-width: 70px 20px 50px 20px;
     border-image-repeat: stretch;
-    
+
 }
 
-article:nth-of-type(1){
+article:nth-of-type(1) {
     transform: rotate(-5deg);
 }
 
-article:nth-of-type(3){
+article:nth-of-type(3) {
     transform: rotate(5deg);
 }
 
@@ -123,14 +199,14 @@ article:nth-of-type(1) img:nth-child(1) {
 
 article img:nth-child(2) {
     width: 220px;
-    
+
 }
 
 article:nth-of-type(2) img:nth-child(1) {
     width: 20px;
     position: absolute;
     top: -13%;
-    
+
 }
 
 article:nth-of-type(2) img:nth-child(2) {
@@ -159,14 +235,16 @@ article p {
 
 
 
-article h3{
+article h3 {
     padding-top: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 hr {
-    width: 95%; /* Ajustar el ancho de la línea */
-    border-top: 2px solid rgb(171, 163, 163); /* Hacer la línea visible */
+    width: 95%;
+    /* Ajustar el ancho de la línea */
+    border-top: 2px solid rgb(171, 163, 163);
+    /* Hacer la línea visible */
     margin-top: 10px;
 }
 
@@ -189,4 +267,48 @@ footer p {
     padding: 0;
     margin: 0;
     box-shadow: 6px 6px 5px #536b6b;
+}
+
+
+/*VIDEO.HTML*/
+
+main {
+    display: flex;
+    gap: 20px;
+}
+.nav2 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav2 input{
+    background-color: #da5329;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#barra
+{
+width: 705px;
+margin:5px;
+height: 16px;
+padding: 2px;
+border: 1px solid #CCCCCC;
+background: #EEEEEE;
+}
+#progreso
+{
+position: absolute;
+width: 0px;
+height: 16px;
+background:rgba(0,0,150,.2)
+;
+}
+
+#reproductor{
+    border: 2px solid black;
 }
