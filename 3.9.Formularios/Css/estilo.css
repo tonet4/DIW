@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: 'Tahoma', Geneva, sans-serif;
+}
+
+form {
+    margin: 10px auto;
+    width: 710px;
+    text-align: center;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-image: url('../imgs/bg-form.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    background-image: url('../imgs/bg-formtitle-left.png'), url('../imgs/bg-formtitle-right.png');
+    background-repeat: no-repeat;
+    background-position: left, right;
+    background-size: 100px auto;
+    font-family: 'AcknowledgementMedium', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+input{
+    border: none; /* Elimina el borde por defecto */
+    border-bottom: 2px dotted #888; /* Añade una línea inferior */
+    background: none; /* Elimina el fondo blanco */
+    color: #888; /* Cambia el color del texto */
+    font-size: 1em; /* Ajusta el tamaño del texto */
+    width: 80%; /* Haz que el input ocupe el ancho completo del contenedor */
+    padding: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    text-align: center;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background: radial-gradient(circle, rgb(144, 144, 144), rgb(72, 72, 72));
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Tahoma', Geneva, sans-serif;
+    opacity: 0.8;
+    padding: 10px 20px;
+    transition: opacity 0.25s linear;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+
+
+#cantidad{
+    border-bottom: 2px dotted #888; /* Añade una línea inferior */
+    background: none; /* Elimina el fondo blanco */
+    color: #888; /* Cambia el color del texto */
+    font-size: 1em; /* Ajusta el tamaño del texto */
+    width: 15%; /* Haz que el input ocupe el ancho completo del contenedor */
+    
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    text-align: center;
+}
