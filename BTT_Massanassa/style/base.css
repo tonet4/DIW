@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0; /* Elimina los márgenes del body */
+    padding: 0; /* Elimina el relleno del body */
+    background-color: var(--clr3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    
+  }
+
+
+  :root {
+    --clr1: #0D7C66;
+    --clr2: #41B3A2;
+    --clr3: #BDE8CA;
+    --clr4: #D7C3F1;
+
+    --degra: 
+  
+  }
+
+  /********************************************************************
+*************************H E A D E R**************************************
+*********************************************************************/
+
+header {
+    height: 100px; /*Altura del header*/
+    background-color: var(--clr1);
+    padding: 0 50px;
+    color: var(--clr2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+  
+  }
+  
+  .titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .titulo img{
+    width: 100px;
+    height:100px;
+  }
+  
+  .titulo h2{
+    margin-left: 10px;
+    color: var(--clr4);
+  }
+  
+  
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    gap: 20px;
+  }
+  
+  
+  .menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 10px;
+    transition: 0.4s;
+    color: #41B3A2;
+    font-size: 15px;
+  
+  }
+  
+  .menu a:hover{
+    color: var(--clr4);
+  }
+  
+  .buscador input { 
+    padding: 8px 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    outline: none; 
+    width: 150px; 
+    transition: width 0.4s; }
+  
+  .buscador input:focus { 
+    width: 200px; /* Ancho cuando el input está activo */ 
+  }
+
+  /* 
+------------------------------------
+-------------FOOTER-----------------
+------------------------------------
+
+Estilo general del footer */
+footer {
+    background-color: #3f3939;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 2; /* Add this property */
+    position: relative; /* Add this property as well */
+    
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 15px;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+  }
+  
+  /* Estilo de los enlaces sociales */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Estilo de la parte inferior del footer */
+  .footer-bottom {
+    background-color: #222;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+
+  /********************************************************************
+*************************R E S P O N S I V**************************************
+*********************************************************************/
+/*Con esto hacemos que cuando la pantalla baje de un tamaño de 1120px desaparezca el menu lateral*/
+@media (max-width: 1120px) {
+    .left-menu {
+        display: none;
+    }
+  
+    .buscador {
+      display: none;
+  
+    }
+    
+  }
+  
+  
+  
+  /* Media query para pantallas móviles */
+  @media (max-width: 768px) {
+    
+    /*HEADER*/
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* Reducir el espacio entre los enlaces */
+      position: static; /* Eliminar la posición fija para evitar ocupar toda la pantalla */
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu a {
+      font-size: 15px; /* Ajustar el tamaño de la fuente para mejor legibilidad en móviles */
+      padding: 4.5px 0; /* Añadir más espacio alrededor de los enlaces */
+    }
+  
+    .titulo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    /*FOOTER*/
+  .footer-content {
+    flex-direction: column; /* Cambiar a columna para mejor disposición en móviles */
+    align-items: center;
+  }
+
+  .footer-section.about {
+    display: none; /* Ocultar la sección "Sobre Nosotros" en móviles */
+  }
+
+  .footer-section.contact p:last-of-type {
+    display: none; /* Ocultar la ubicación en la sección "Contacto" en móviles */
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Ajustar márgenes para móviles */
+    text-align: center;
+  }
+
+  .footer-section h2 {
+    font-size: 16px; /* Ajustar tamaño del título para móviles */
+  }
+
+  .footer-section p {
+    font-size: 14px; /* Ajustar tamaño del texto para móviles */
+  }
+}

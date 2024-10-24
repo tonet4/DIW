@@ -381,6 +381,45 @@ header {
   font-weight: bold;
   border-radius: 20px;
 }
+/********************************************************************
+*************************C O N T A C T O**************************************
+*********************************************************************/
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 400px;
+
+  border: 1px solid black;
+
+}
+
+form h1{
+  text-align: center;
+  color: var(--clr1);
+}
+
+form input{
+  border: none; 
+  border-bottom: 2px dotted var(--clr1); /* Añade una línea inferior */
+  background: none; /* Elimina el fondo blanco */
+  color: var(--clr1); /* Cambia el color del texto */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  padding: 5px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  text-align: center;
+  margin: 0 50px;
+}
+
+form label{
+  text-align: center;
+  padding-top: 20px;
+}
+
+form textarea{
+  margin: 0 50px;
+}
 
 /********************************************************************
 *************************R E S P O N S I V**************************************

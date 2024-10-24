@@ -1,6 +1,6 @@
-/* General Styles */
 body {
-    font-family: 'Tahoma', Geneva, sans-serif;
+    font-family: "fuente1";
+    font-weight: bold;
 }
 
 form {
@@ -12,7 +12,7 @@ form {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
     background-image: url('../imgs/bg-form.png');
-    background-position: center;
+    background-position: bottom; /*poner la imagen al final de la caja*/
     background-repeat: no-repeat;
 }
 
@@ -21,9 +21,15 @@ h1 {
     margin-bottom: 20px;
     background-image: url('../imgs/bg-formtitle-left.png'), url('../imgs/bg-formtitle-right.png');
     background-repeat: no-repeat;
-    background-position: left, right;
+    background-position: left, right; /*posicionar las imagenes del encabezado*/ 
     background-size: 100px auto;
-    font-family: 'AcknowledgementMedium', sans-serif;
+    
+    
+}
+
+form p {
+    margin: 0; 
+    font-weight: normal; /*pongo en normal porque en el body lo tengo puesto todo en negrita*/
 }
 
 ul {
@@ -37,14 +43,15 @@ li {
 
 input{
     border: none; /* Elimina el borde por defecto */
-    border-bottom: 2px dotted #888; /* Añade una línea inferior */
+    border-bottom: 2px dotted #888; /* Añade una línea inferior con puntos*/
     background: none; /* Elimina el fondo blanco */
     color: #888; /* Cambia el color del texto */
-    font-size: 1em; /* Ajusta el tamaño del texto */
-    width: 80%; /* Haz que el input ocupe el ancho completo del contenedor */
+    font-size: 1em; 
+    width: 80%; 
     padding: 5px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     text-align: center;
+    font-weight: bold;
 }
 
 button {
@@ -54,9 +61,9 @@ button {
     color: white;
     text-transform: uppercase;
     font-size: 2em;
-    font-family: 'Tahoma', Geneva, sans-serif;
+    font-family: "fuente1";
     opacity: 0.8;
-    padding: 10px 20px;
+    padding: 10px 50px;
     transition: opacity 0.25s linear;
 }
 
@@ -65,14 +72,35 @@ button:hover {
 }
 
 
-
 #cantidad{
     border-bottom: 2px dotted #888; /* Añade una línea inferior */
     background: none; /* Elimina el fondo blanco */
-    color: #888; /* Cambia el color del texto */
-    font-size: 1em; /* Ajusta el tamaño del texto */
+    color: #888; 
+    font-size: 1em; 
     width: 15%; /* Haz que el input ocupe el ancho completo del contenedor */
-    
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     text-align: center;
 }
+
+
+/*Para los input que sean requeridos y esten invalidos pondremos esta imagen*/
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:invalid {
+background: url('../imgs/invalid.png') no-repeat 100% 0;/*no-repeat 100% 0 para que no se repita la imagen y la posicion z e x de la imagen*/
+}
+/*Para los input que sean requeridos y esten validos pondremos esta imagen*/
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:valid {
+background: url('../imgs/valid.png') no-repeat 100% 0;
+}
+
+
+/*Para los input que sean requeridos pondremos esta imagen*/
+input:required{
+    background: url("../imgs/required.png") no-repeat 100% 0;
+}
+
+/*Esto es para descargarte una fuente de internet y poder aplicarla*/
+@font-face {
+    font-family: "fuente1";
+    src: url("../fuentes/tahoma.ttf");
+}
+

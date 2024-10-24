@@ -9,19 +9,17 @@
 </head>
 <body>
     <form id="registro" method="post">
-        <h1>Regístrate!</h1>
+        <h1>REGíSTRATE!</h1>
         <ul>
             <li>
                 <label for="nombre">Mi nombre es:</label><br>
                 <input type="text" id="nombre" name="nombre" required autofocus>
-                <img src="imgs/valid.png" class="icono-final">
             </li>
             <li>
                 <div class="input-container">
                     <label for="email">Mi email es:</label><br>
                     <p>(puedes introducir varios separados por comas)</p>
                     <input type="email" id="email" name="email" multiple required>
-                    <img src="imgs/required.png" class="icono-final">
                 </div>
             </li>
             <li>
@@ -31,18 +29,16 @@
             </li>
             <li>
                 <label for="url">Mi dirección web es:</label>
-                <input type="url" id="url" name="url" placeholder="http://ejemplo.com">
+                <input type="url" id="url" name="url" placeholder="http://ejemplo.com" required multiple><!--Se puede poner mas de un email separado con comas-->
             </li>
             <li>
-                <label for="password1">Me gustaría que mi password fuera:</label>
+                <label  id="espacio" for="password1">Me gustaría que mi password fuera:</label>
                 <p>(Al menos 6 caracteres, sin espacios)</p>
-                <input type="password" id="password1" name="password1" minlength="6" required>
-                <img src="imgs/required.png" class="icono-final">
+                <input type="password" id="password1" name="password1" minlength="6" required> <!--minlength="6" required minimo 6 caracteres sin espacios-->
             </li>
             <li>
                 <label for="password2">Mi password repetida es:</label>
                 <input type="password" id="password2" name="password2" minlength="6" required>
-                <img src="imgs/required.png" class="icono-final">
             </li>
             <li>
                 <label for="conocimientos">En una escala de 1 a 10, mis conocimientos de HTML5 son:</label>
@@ -50,8 +46,7 @@
             </li>
             <li>
                 <label for="fechaInicio">Por favor, inicia mi suscripción el día:</label>
-                <input type="date" id="fechaInicio" name="fechaInicio" required placeholder="dd/mm/aaaa">
-                <img src="imgs/required.png" class="icono-final">
+                <input type="date" id="fechaInicio" name="fechaInicio" required placeholder="dd/mm/aaaa"><!--requerido formato dd/mm/aaaa -->
             </li>
             <li>
                 <label for="cantidad">Me gustaría recibir:</label>
@@ -63,7 +58,7 @@
                 
             </li>
             <li>
-                <button id="registro-submit" type="button"><em>ENVIAME</em></button>
+                <button id="registro-submit" type="button"><em>ENVÍAME</em></button>
             </li>
         </ul>
     </form>
