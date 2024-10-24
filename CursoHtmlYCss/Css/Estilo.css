@@ -29,6 +29,7 @@ header h1 {
     color: white;
     font-weight: 1000;
     padding-left: 8%;
+    font-family: "fuenteTitulo";
 }
 
 hr {
@@ -319,4 +320,15 @@ main {
 #reproductor{
     border: 2px solid black;
     box-shadow: inset 2px 2px 10px rgba(67, 66, 66, 0.9);
+}
+
+
+@font-face {
+    font-family: "fuenteTitulo";
+    src: url("../fuentes/Luckiest_Guy/LuckiestGuy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "fuenteContenidos";
+    src: url("../fuentes/Abel/Abel-Regular.ttf");
 }
