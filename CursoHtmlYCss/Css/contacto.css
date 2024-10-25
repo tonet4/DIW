@@ -156,88 +156,6 @@ nav section ul li:first-child:before {
     margin-left: -5px;
 }
 
-
-
-
-
-article {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border: 1px solid;
-    align-items: center;
-    max-width: 270px;
-    height: 590px;
-    font-family: "fuenteContenidos";
-
-
-
-    border-image-source: url(../Imagenes/movil.png);
-    border-image-slice: 70 20 50 20;
-    border-width: 70px 20px 50px 20px;
-    border-image-repeat: stretch;
-
-}
-
-article:nth-of-type(1) {
-    transform: rotate(-5deg);
-}
-
-article:nth-of-type(3) {
-    transform: rotate(5deg);
-}
-
-article:nth-of-type(1) img:nth-child(1) {
-    width: 20px;
-    position: absolute;
-    top: -13%;
-    right: 10%
-}
-
-article img:nth-child(2) {
-    width: 220px;
-
-}
-
-article:nth-of-type(2) img:nth-child(1) {
-    width: 20px;
-    position: absolute;
-    top: -13%;
-
-}
-
-article:nth-of-type(2) img:nth-child(2) {
-    width: 220px;
-}
-
-article:nth-of-type(3) img:nth-child(1) {
-    width: 20px;
-    position: absolute;
-    top: -13%;
-    left: 14%
-}
-
-article:nth-of-type(3) img:nth-child(2) {
-    width: 220px;
-}
-
-
-
-article p {
-    text-align: center;
-    padding: 10px 10px;
-    padding-bottom: 10px;
-    line-height: 1.7;
-}
-
-
-
-article h3 {
-    padding-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 hr {
     width: 95%;
     /* Ajustar el ancho de la línea */
@@ -267,65 +185,67 @@ footer p {
     box-shadow: 6px 6px 5px #536b6b;
 }
 
+/* CONTACTO*/
 
-/*VIDEO.HTML*/
+/* Importar la fuente Aguafina Script */
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
 
 main {
+    background-image: url(../Imagenes/fondoForm.jpg);
+    background-size: cover;
     display: flex;
-    gap: 20px;
-}
-.nav2 {
-    display: flex;
-    flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para el posicionamiento absoluto del título */
 }
 
-.nav2 input{
-    background-color: #da5329;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: white;
-    margin-bottom: 10px;
+#contenedorFormulario {
+    position: relative;
+    display: inline-block;
+    margin: 50px;
+    width: 600px;
+    padding: 20px 50px;
+    background-color: rgba(200, 200, 200, 0.7); /* Color con opacidad */
+    text-align: left;
+    box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.4); /* Sombra de la caja */
 }
 
-.nav2 label{
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-#barra
-{
-    width: 705px;
-    margin:5px;
-    height: 16px;
-    padding: 2px;
-    border: 1px solid #CCCCCC;
-    background: #EEEEEE;
-    box-shadow: inset 2px 2px 10px rgba(67, 66, 66, 0.9);
-    
-}
-
-#progreso{
+#titulito {
     position: absolute;
-    width: 0px;
-    height: 16px;
-    background:rgba(0,0,150,.2);
-    
+    top: -16px; /* Distancia al borde superior */
+    left: 490px; /* Distancia al borde izquierdo */
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con opacidad */
+    font-family: 'Aguafina Script', cursive; /* Fuente en cursiva */
+    color: #333; /* Color del texto */
+    letter-spacing: 5px; /* Espacio entre letras */
+    text-shadow: 0px 0px 2px #777; /* Sombra del texto */
+    padding: 0 10px; /* Márgenes internos */
 }
 
-#reproductor{
-    border: 2px solid black;
-    box-shadow: inset 2px 2px 10px rgba(67, 66, 66, 0.9);
+/* Estilos comunes para todos los campos del formulario, excepto el botón */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    display: inline-block;
+    border: 1px solid #e5e5e5; /* Borde de 1px */
+    padding: 10px; /* Espacio interno */
+    width: calc(100% - 22px); /* Ajustar el ancho para incluir padding */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio entre campos */
 }
 
-
-@font-face {
-    font-family: "fuenteTitulo";
-    src: url("../fuentes/Luckiest_Guy/LuckiestGuy-Regular.ttf");
+/* Estilo para el botón de envío */
+input[type="submit"] {
+    background-color: #0379c2; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold; /* Texto en negrita */
 }
 
-@font-face {
-    font-family: "fuenteContenidos";
-    src: url("../fuentes/Abel/Abel-Regular.ttf");
+/* Efecto hover para el botón */
+input[type="submit"]:hover {
+    background-color: #ff7e42; /* Color al pasar el ratón */
 }
