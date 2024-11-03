@@ -22,16 +22,18 @@
             <h2>PENYA BTT <br> MASSANASSA</h2>
           </div>
 
-          <nav class="menu">
-            
+          <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label">☰</label>
+
+        <nav class="menu" id="responsiveMenu">
             <a href="index.html">Inicio</a>
             <a href="index.html#sobre">Sobre nosotros</a>
             <a href="equipacion.html" >Equipación</a>
-            <a href="#">El tiempo</a>
+            <a href="#">Hazte socio</a>
             <a href="#"style="color: #D7C3F1; text-decoration: underline;">Contacto</a>
-            
         </nav>
 
+          
     </header>
     <section>
         <div class="migitas-diw">
@@ -41,13 +43,13 @@
     
         
         <form id="container-formulario" method="post">
-            <h1>Formulario de Contacto</h1>
+            <h1>FORMULARiO DE CONTACTO</h1>
             <p>¿Tienes alguna duda? No dudes en preguntarnos, te respondemos en la máxima brevedad posible</p>
             <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required maxlength="50">
+            <input type="text" id="name" name="name" required maxlength="30">
 
             <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" required pattern="\d{10}" title="Introduce un número de teléfono válido (10 dígitos).">
+            <input type="tel" id="phone" name="phone" required pattern="\d{9}"  minlength="9" maxlength="15" title="Introduce un número de teléfono válido.">
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
