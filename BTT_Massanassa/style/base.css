@@ -4,11 +4,27 @@
     padding: 0;
   }
 
+  @font-face {
+    font-family: "fuente1";
+    src: url(../fuentes/Montserrat_Alternates/MontserratAlternates-Light.ttf);
+    
+  }
+
+  @font-face {
+    font-family: "fuente2";
+    src: url(../fuentes/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+  }
+
+  @font-face {
+    font-family: "fuente3";
+    src: url(../fuentes/Montserrat_Alternates/MontserratAlternates-Bold.ttf);
+  }
+
   body {
     margin: 0; /* Elimina los márgenes del body */
     padding: 0; /* Elimina el relleno del body */
     background-color: var(--clr3);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "fuente1";
         
     
   }
@@ -28,72 +44,85 @@
 *************************H E A D E R**************************************
 *********************************************************************/
 
+
 header {
-    height: 100px; /*Altura del header*/
-    background-color: var(--clr1);
-    padding: 0 50px;
-    color: var(--clr2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
+  height: 100px; /*Altura del header*/
+  background-color: var(--clr1);
+  padding: 0 50px;
+  color: var(--clr2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+
+}
+
+.titulo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   
-  }
-  
-  .titulo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .titulo img{
-    width: 100px;
-    height:100px;
-  }
-  
-  .titulo h2{
-    margin-left: 10px;
-    color: var(--clr4);
-  }
-  
-  
-  .menu{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    gap: 20px;
-  }
-  
-  
-  .menu a{
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0 10px;
-    transition: 0.4s;
-    color: #41B3A2;
-    font-size: 15px;
-  
-  }
-  
-  .menu a:hover{
-    color: var(--clr4);
-  }
-  
-  .buscador input { 
-    padding: 8px 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 20px; 
-    outline: none; 
-    width: 150px; 
-    transition: width 0.4s; }
-  
-  .buscador input:focus { 
-    width: 200px; /* Ancho cuando el input está activo */ 
-  }
+}
+
+.titulo img{
+  width: 100px;
+  height:100px;
+}
+
+.titulo h2{
+  margin-left: 10px;
+  color: var(--clr4);
+  font-family: "fuente2";
+}
+
+
+/* Estilo para que no se vea la hamburguesa cuando este en modo pantalla grande */
+.menu-toggle-label {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Estilo para que no se vea el checkbox cuando este en modo pantalla grande */
+.menu-toggle-checkbox{
+  display: none;
+}
+
+/* Estilos para el menú en pantallas grandes */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+  transition: 0.4s;
+  color: #41B3A2;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: var(--clr4);
+}
+
+.buscador input { 
+  padding: 8px 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 20px; 
+  outline: none; 
+  width: 150px; 
+  transition: width 0.4s; }
+
+.buscador input:focus { 
+  width: 200px; /* Ancho cuando el input está activo */ 
+}
+
 
   /* 
 ------------------------------------
@@ -208,6 +237,38 @@ footer {
       align-items: center;
       padding: 10px;
     }
+
+     /*MENU HAMBURGUESA*/
+  /* Ocultar el menú por defecto en pantallas pequeñas */
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  /* Mostrar el botón hamburguesa */
+  .menu-toggle-label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Mostrar el menú cuando el checkbox esté marcado */
+  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu {
+    display: flex;
+  }
+
+  .menu a:hover {
+    color: var(--clr4);
+  }
+
+  .titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
     /*FOOTER*/
   .footer-content {
