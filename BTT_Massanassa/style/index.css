@@ -1,0 +1,373 @@
+
+/*MENU IQUIERDA*/
+
+body > nav:first-of-type {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 100vh;
+    background-color: var(--clr1);
+    padding: 30px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 1;
+    margin-top: 104px;
+}
+
+body > nav:first-of-type ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body > nav:first-of-type li {
+    margin-bottom: 10px;
+}
+
+body > nav:first-of-type a {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.4s;
+    color: #41B3A2;
+}
+
+body > nav:first-of-type a:hover {
+    color: var(--clr4);
+}
+body > nav:first-of-type ul li:first-child a {
+  text-decoration: underline;
+  font-size: 16px;
+  padding: 20px 0;
+  color: var(--clr4);
+}
+
+body > nav:first-of-type ul li a {
+  transition: 0.4s;
+  font-size: 14px;
+  
+  color: #41B3A2;
+}
+
+body > nav:first-of-type ul li a:hover {
+  color: var(--clr4);
+}
+
+/********************************************************************
+*************************E S L O G A N**************************************
+*********************************************************************/
+section:not(footer section):not(section > section):first-of-type {
+  background-image: url('../image/ciclo6.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 90vh; /* Altura de la ventana para ocupar toda la pantalla */
+  display: flex; /* Activamos flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  text-align: center; /* Centrar el texto */
+  flex-direction: column; /* Para que los elementos se dispongan en columna */
+  gap: 20px; /* Espaciado entre los elementos */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.4); /* Sombra de texto */
+}
+
+section:not(footer section):first-of-type h2 {
+  color: var(--clr1); /* Color del texto */
+  font-size: 50px; /* Tamaño de fuente */
+  text-transform: uppercase; /* Todo en mayúsculas */
+  margin-top: -165px; /* Espaciado superior */
+}
+
+section:not(footer section):first-of-type a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: var(--clr1); /* Color del enlace */
+  padding: 20px 40px; /* Relleno del botón */
+  transition: 0.4s; /* Transición suave */
+  padding-bottom: 70px; /* Espaciado inferior */
+  font-size: 40px; /* Tamaño del texto del enlace */
+  font-weight: 1000;
+}
+
+section:first-of-type a:hover {
+  color: var(--clr1); /* Color al pasar el ratón */
+  font-weight: 1000; /* Negrita al pasar el ratón */
+  font-size: 60px; /* Cambio de tamaño en hover */
+}
+
+
+
+/********************************************************************
+*************************S O B R E N O S O T R O S**************************************
+*********************************************************************/
+
+section > a > span {
+  text-align: center;
+  font-size: 20px;
+  color: var(--clr1);
+  display: block; /* convierte el span en un elemento de bloque */
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  padding-bottom: 30px;
+  padding-top: 40px;
+  text-decoration: underline;
+  font-family: "fuente3";
+}
+
+section > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 160px;
+  padding-bottom: 100px;
+}
+
+section > section img {
+  width: 40%; /* ajusta el ancho de la imagen */
+  height: auto;
+  margin: 0 20px; /* agrega un margen entre la imagen y el texto */
+  border-radius: 10px; /* agrega un borde redondeado a la imagen */
+}
+
+section > section p {
+  width: 50%;
+  text-align: justify;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 2.5em;
+}
+
+section > section p > span {
+  font-weight: bold;
+  color: var(--clr1);
+  padding-right: 7px;
+  transition: 0.4s;
+}
+
+section > section p > span:hover {
+  color: var(--clr4);
+}
+
+section > section p:last-child {
+  display: none; /* Ocultar la versión resumida en pantallas grandes */
+}
+
+/********************************************************************
+*************************D I W**************************************
+*********************************************************************/
+
+.migitas-diw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+.migitas-diw a{
+  text-decoration: none;
+  transition: 0.4s;
+  color: var(--clr1);
+}
+
+.migitas-diw a:hover{
+  color: var(--clr4);
+}
+
+.contenido-diw{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+.contenido-diw h2{
+  color: var(--clr1);
+  padding-bottom: 20px;
+}
+
+.contenido-diw p{
+  padding-bottom: 20px;
+}
+
+
+/********************************************************************
+*************************R E S P O N S I V**************************************
+*********************************************************************/
+
+
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+  
+
+  /*ESLOGAN*/
+
+  section:not(footer section):not(section > section):first-of-type {
+    height: auto; /* Dejamos que la altura se ajuste al contenido */
+    padding: 40px 20px; /* Añadimos un poco de padding para los móviles */
+    justify-content: flex-start; /* Alineamos el contenido hacia el inicio */
+    gap: 15px; /* Reducimos el espacio entre elementos */
+  }
+
+  section:not(footer section):first-of-type h2 {
+    font-size: 28px; /* Reducimos el tamaño de la fuente */
+    padding-top: 0; /* Eliminamos el padding superior */
+    margin-top: 0; /* Evitamos que el margen sea negativo */
+    line-height: 1.4; /* Ajustamos el interlineado */
+  }
+
+  section:not(footer section):first-of-type a {
+    font-size: 18px; /* Reducimos el tamaño del texto del botón */
+    padding: 15px 25px; /* Ajustamos el padding */
+    font-weight: 900; /* Aumentamos un poco el peso de la fuente para destacarlo */
+    margin-bottom: 20px; /* Añadimos un margen inferior para separarlo de otros elementos */
+  }
+
+  section:first-of-type a:hover {
+    font-size: 20px; /* Aumentamos un poco el tamaño del botón al pasar el mouse */
+  }
+
+  /* Reajustamos la imagen del fondo para que ocupe menos espacio en pantallas pequeñas */
+  section:not(footer section):not(section > section):first-of-type {
+    background-position: top; /* Colocamos la imagen más arriba */
+  }
+  /*SOBRE NOSOTROS*/
+  section > a > span {
+    font-size: 18px; /* Reducimos el tamaño del título */
+    padding-top: 20px; /* Reducimos el padding superior */
+    padding-bottom: 20px; /* Reducimos el padding inferior */
+  }
+
+  section > section {
+    display: flex;
+    flex-direction: column; /* Apilamos los elementos en columna */
+    justify-content: flex-start; /* Alineamos al inicio */
+    align-items: center; /* Centrado de los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    margin-left: 0; /* Eliminas el margen izquierdo */
+    padding-bottom: 30px; /* Ajustamos el padding inferior */
+  }
+
+  section > section img {
+    width: 80%; /* Ajustamos el tamaño de la imagen */
+    height: auto; /* Mantenemos la proporción de la imagen */
+    margin: 0 auto 20px; /* Centramos la imagen y ajustamos el margen inferior */
+  }
+
+  section > section p {
+    width: 90%; /* Aumentamos el ancho del texto */
+    font-size: 16px; /* Ajustamos el tamaño de la fuente */
+    text-align: justify;
+    line-height: 1.6; /* Ajustamos la altura de la línea */
+    margin: 0 auto; /* Centramos el texto */
+    display: none;
+  }
+
+  section > section p > span {
+    font-weight: bold;
+    color: var(--clr1);
+    padding-right: 7px;
+    transition: 0.4s;
+  }
+
+  section > section p > span:hover {
+    color: var(--clr4);
+  }
+
+  section > section p:last-child {
+    display: block; /* Mostramos el texto resumido en dispositivos móviles */
+  }
+
+  /*FOOTER*/
+  .footer-content {
+    flex-direction: column; /* Cambiar a columna para mejor disposición en móviles */
+    align-items: center;
+  }
+
+  .footer-section.about {
+    display: none; /* Ocultar la sección "Sobre Nosotros" en móviles */
+  }
+
+  .footer-section.contact p:last-of-type {
+    display: none; /* Ocultar la ubicación en la sección "Contacto" en móviles */
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Ajustar márgenes para móviles */
+    text-align: center;
+  }
+
+  .footer-section h2 {
+    font-size: 16px; /* Ajustar tamaño del título para móviles */
+  }
+
+  .footer-section p {
+    font-size: 14px; /* Ajustar tamaño del texto para móviles */
+  }
+ 
+/* 
+------------------------------------
+-------------FOOTER-----------------
+------------------------------------
+
+Estilo general del footer */
+footer {
+  background-color: #3f3939;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 2; /* Add this property */
+  position: relative; /* Add this property as well */
+  
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 15px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+/* Estilo de los enlaces sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Estilo de la parte inferior del footer */
+.footer-bottom {
+  background-color: #222;
+  padding: 10px;
+  font-size: 14px;
+}
+
+}

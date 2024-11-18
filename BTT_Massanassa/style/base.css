@@ -48,8 +48,8 @@
 header {
   height: 100px; /*Altura del header*/
   background-color: var(--clr1);
-  padding: 0 50px;
   color: var(--clr2);
+  padding: 0px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,21 +58,14 @@ header {
 
 }
 
-.titulo{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  
-}
 
-.titulo img{
+header img{
   width: 100px;
   height:100px;
 }
 
-.titulo h2{
-  margin-left: 10px;
+header h2{
+  margin-right: 540px;
   color: var(--clr4);
   font-family: "fuente2";
 }
@@ -91,37 +84,28 @@ header {
 }
 
 /* Estilos para el menú en pantallas grandes */
-.menu {
+nav {
   display: flex;
   justify-content: space-between;
   text-align: center;
   gap: 20px;
 }
 
-.menu a {
+nav a {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 10px;
   transition: 0.4s;
   color: #41B3A2;
-  font-size: 15px;
+  font-size: 16px;
+  
 }
 
-.menu a:hover {
+nav a:hover {
   color: var(--clr4);
 }
 
-.buscador input { 
-  padding: 8px 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 20px; 
-  outline: none; 
-  width: 150px; 
-  transition: width 0.4s; }
 
-.buscador input:focus { 
-  width: 200px; /* Ancho cuando el input está activo */ 
-}
 
 
   /* 
@@ -131,60 +115,57 @@ header {
 
 Estilo general del footer */
 footer {
-    background-color: #3f3939;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 2; /* Add this property */
-    position: relative; /* Add this property as well */
-    
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .footer-section {
-    flex: 1;
-    margin: 15px;
-  }
-  
-  .footer-section h2 {
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  .footer-section p {
-    margin: 5px 0;
-  }
-  
-  /* Estilo de los enlaces sociales */
-  .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .social-icon {
-    margin: 0 10px;
-  }
-  
-  .social-icon img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Estilo de la parte inferior del footer */
-  .footer-bottom {
-    background-color: #222;
-    padding: 10px;
-    font-size: 14px;
-  }
+  background-color: #3f3939;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  display: flex; /* Usar flexbox para organizar las secciones */
+  flex-wrap: wrap; /* Permitir que las secciones se ajusten si no hay suficiente espacio */
+  justify-content: center; /* Centrar las secciones */
+}
 
+footer section {
+  margin: 15px; /* Añadir margen alrededor de cada sección */
+  flex: 1; /* Permitir que las secciones ocupen espacio igual */
+  min-width: 200px; /* Establecer un ancho mínimo para las secciones */
+}
+
+footer h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Estilo de los enlaces sociales */
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+footer nav a {
+  margin: 0 10px;
+}
+
+footer nav img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Estilo de la parte inferior del footer */
+footer > p {
+  background-color: #222;
+  padding: 10px;
+  font-size: 14px;
+  margin: 20px 0 0; /* Añadir margen superior para separar del contenido */
+  width: 100%; /* Asegurarse de que ocupe todo el ancho */
+}
 
   /********************************************************************
 *************************R E S P O N S I V**************************************
@@ -202,98 +183,82 @@ footer {
     
   }
   
-  
+  @media (max-width: 768px) { 
   
   /* Media query para pantallas móviles */
-  @media (max-width: 768px) {
-    
     /*HEADER*/
     header {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 10px;
-    }
-  
-    .menu {
+  }
+
+  /* Nav (Responsive) */
+  nav {
       flex-direction: column;
       align-items: center;
-      gap: 10px; /* Reducir el espacio entre los enlaces */
-      position: static; /* Eliminar la posición fija para evitar ocupar toda la pantalla */
+      gap: 10px;
       width: 100%;
       height: auto;
       padding: 0;
       margin: 0;
-    }
-  
-    .menu a {
-      font-size: 15px; /* Ajustar el tamaño de la fuente para mejor legibilidad en móviles */
-      padding: 4.5px 0; /* Añadir más espacio alrededor de los enlaces */
-    }
-  
-    .titulo{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+      display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
+  }
 
-     /*MENU HAMBURGUESA*/
-  /* Ocultar el menú por defecto en pantallas pequeñas */
-  .menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 10px;
+  nav a {
+      font-size: 15px;
+      padding: 4.5px 0;
   }
 
   /* Mostrar el botón hamburguesa */
   .menu-toggle-label {
-    display: block;
-    margin-top: 10px;
+      display: block;
+      margin-top: 10px;
   }
 
   /* Mostrar el menú cuando el checkbox esté marcado */
-  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu {
-    display: flex;
+  #menu-toggle:checked + .menu-toggle-label + nav {
+      display: flex;
   }
 
-  .menu a:hover {
-    color: var(--clr4);
-  }
-
-  .titulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  /* Logo y título centrados */
+  header a, header h2 {
+      text-align: center;
+      margin: 10px 0;
   }
 
     /*FOOTER*/
-  .footer-content {
-    flex-direction: column; /* Cambiar a columna para mejor disposición en móviles */
-    align-items: center;
-  }
-
-  .footer-section.about {
-    display: none; /* Ocultar la sección "Sobre Nosotros" en móviles */
-  }
-
-  .footer-section.contact p:last-of-type {
-    display: none; /* Ocultar la ubicación en la sección "Contacto" en móviles */
-  }
-
-  .footer-section {
-    margin: 10px 0; /* Ajustar márgenes para móviles */
-    text-align: center;
-  }
-
-  .footer-section h2 {
-    font-size: 16px; /* Ajustar tamaño del título para móviles */
-  }
-
-  .footer-section p {
-    font-size: 14px; /* Ajustar tamaño del texto para móviles */
-  }
+    footer {
+      flex-direction: column; /* Cambiar a columna para mejor disposición en móviles */
+      align-items: center; /* Centrar elementos en el footer */
+    }
+  
+    footer section {
+      display: none; /* Ocultar todas las secciones por defecto en móviles */
+    }
+  
+    footer section:nth-child(1) {
+      display: block; /* Mostrar "Sobre Nosotros" en móviles */
+    }
+  
+    footer section:nth-child(3) {
+      display: block; /* Mostrar "Contacto" en móviles */
+    }
+  
+    footer section:nth-child(2) {
+      display: none; /* Ocultar "Síguenos" en móviles */
+    }
+  
+    footer > p {
+      margin-top: 20px; /* Añadir margen superior para separar del contenido */
+    }
+  
+    footer h2 {
+      font-size: 16px; /* Ajustar tamaño del título para móviles */
+    }
+  
+    footer p {
+      font-size: 14px; /* Ajustar tamaño del texto para móviles */
+    }
 }

@@ -89,7 +89,7 @@ form{
     
   }
 
-  section{
+  section:not(footer section) {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -170,7 +170,7 @@ article:nth-of-type(2) iframe {
     height: auto;
 }
 
-section {
+section:not(footer section) {
   border: none; /* Eliminar el borde de imagen en dispositivos más pequeños */
 }
 

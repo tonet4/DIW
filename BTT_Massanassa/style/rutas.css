@@ -1,0 +1,37 @@
+.migitas-diw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    
+  }
+  
+  .migitas-diw a{
+    text-decoration: none;
+    transition: 0.4s;
+    color: var(--clr1);
+  }
+  
+  .migitas-diw a:hover{
+    color: var(--clr4);
+  }
+
+  /********************************************************************
+************************* R U T A S **************************************
+*********************************************************************/
+
+.titulo-equip{
+    text-align: center;
+    color: var(--clr1);
+    text-decoration: underline;
+    margin: 20px 0;
+    font-family: "fuente3";
+  }
+
+  /*Marco la posición relative en el nav*/
+  .titulo-equip + nav {
+    position: relative;
+    margin: 10px;
+    
+}
+
