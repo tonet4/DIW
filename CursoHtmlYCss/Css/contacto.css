@@ -92,8 +92,6 @@ section:nth-child(4) {
 
 
 /* Estilo de los enlaces */
-
-
 nav section ul {
     position: absolute;
     left: 0;
@@ -111,7 +109,6 @@ nav section ul {
    
 }
 
-
 /* Hover del submenú */
 nav section:hover ul {
     height: auto;
@@ -124,16 +121,15 @@ nav section ul li {
     border: 1px solid black;
     padding: 10px;
     transition: background-color 0.3s;
+    
 
 }
-
 
 /* Hover de las opciones del submenú */
 nav section ul li:hover {
     background-color: #ff7e42;
 
 }
-
 
 /* Primera opción de las opciones del submenú */
 nav section ul li:first-child {
@@ -187,9 +183,13 @@ footer p {
 
 /* CONTACTO*/
 
-/* Importar la fuente Aguafina Script */
-@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+/* Importo la fuente*/
+@font-face {
+    font-family: "fuente1";
+    src: url(../fuentes/AguafinaScript-Regular.ttf);
+}
 
+/* Es donde va a ir el formulario*/
 main {
     background-image: url(../Imagenes/fondoForm.jpg);
     background-size: cover;
@@ -199,53 +199,142 @@ main {
     position: relative; /* Para el posicionamiento absoluto del título */
 }
 
+/*Contenedor del formulario, lo pongo en inner-block como pide el ejercicio*/
 #contenedorFormulario {
     position: relative;
     display: inline-block;
     margin: 50px;
-    width: 600px;
+    width: 1000px;
     padding: 20px 50px;
     background-color: rgba(200, 200, 200, 0.7); /* Color con opacidad */
     text-align: left;
     box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.4); /* Sombra de la caja */
 }
 
+/*Le quito los puntos al listado*/
+#contenedorFormulario li {
+    list-style-type: none;
+}
+
+
+#contenedorFormulario li:nth-of-type(1), li:nth-of-type(2) , li:nth-of-type(3){
+    width: 700px;
+    opacity: 0.5;
+    display: flex;
+}
+
+#contenedorFormulario li:nth-of-type(1) img, li:nth-of-type(2) img{
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    padding-left: 10px;
+    background-color: rgb(200, 200, 200, 0.7);
+}
+
+#contenedorFormulario li:nth-of-type(1) input, li:nth-of-type(2) input{
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    width: 450px;
+    margin-bottom: 15px;
+    padding: 10px; 
+    background-color: rgb(200, 200, 200, 0.7);
+    box-shadow: 
+        0px 1px 4px rgba(0, 0, 0, 0.3),  /* Sombra externa */
+        0px 0px 40px rgba(0, 0, 0, 0.1) inset; /* Sombra interna (inset)*/
+}
+
+#contenedorFormulario li:nth-of-type(1) label, li:nth-of-type(2) label{
+    padding-left: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+#contenedorFormulario  li:nth-of-type(3){
+    margin-bottom: 20px;
+    width: 700px;
+    display: flex;
+    border: 1px solid #e5e5e5;
+}
+
+textarea {
+    height: 215px;
+    background-color: rgb(200, 200, 200, 0.7);
+    padding: 10px;
+    width: 800px;
+    border: none; /*Le quito el borde para que se vea el borde del li*/
+      
+}
+
+li:nth-of-type(3) img {
+    padding-top: 10px;
+    height: 215px;
+    width: 45px;
+    padding-left: 10px;
+    background-color: rgb(200, 200, 200, 0.7);
+}
+
+input::placeholder, textarea::placeholder {
+    font-weight: bold;
+}
+
+
 #titulito {
     position: absolute;
-    top: -16px; /* Distancia al borde superior */
-    left: 490px; /* Distancia al borde izquierdo */
-    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con opacidad */
-    font-family: 'Aguafina Script', cursive; /* Fuente en cursiva */
-    color: #333; /* Color del texto */
-    letter-spacing: 5px; /* Espacio entre letras */
+    top: -30px; /*Posicionamiento del titulo*/
+    left: 690px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333; 
+    letter-spacing: 7px; /* Espacio entre letras */
     text-shadow: 0px 0px 2px #777; /* Sombra del texto */
-    padding: 0 10px; /* Márgenes internos */
+    padding: 0 10px; 
+    font-style: italic;
+    font-family: "fuente1";
 }
 
-/* Estilos comunes para todos los campos del formulario, excepto el botón */
-input[type="text"], 
-input[type="email"], 
-textarea {
-    display: inline-block;
-    border: 1px solid #e5e5e5; /* Borde de 1px */
-    padding: 10px; /* Espacio interno */
-    width: calc(100% - 22px); /* Ajustar el ancho para incluir padding */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 15px; /* Espacio entre campos */
+/* Para el input del email ponemos una imagen si está valido*/
+input:focus:valid + label::after {
+    content: url('../Imagenes/valid.png');
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    padding-left: 10px;
 }
 
-/* Estilo para el botón de envío */
+/*Para el input del email ponemos una imagen si está invalido*/
+input:focus:invalid + label::after {
+    content: url('../Imagenes/invalid.png');
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    padding-left: 10px;
+}
+
+/*Para el input del nombre ponemos una imagen si está valido*/
+input:focus:valid + datalist + label::after {
+    content: url('../Imagenes/valid.png');
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    padding-left: 10px;
+}
+
+/* Para el input del nombre ponemos una imagen si está invalido */
+input:focus:invalid  + datalist + label::after {
+    content: url('../Imagenes/invalid.png');
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    padding-left: 10px;
+}
+
+
+
+/* Estilo para el botón de enviar*/
 input[type="submit"] {
-    background-color: #0379c2; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #0379c2; 
+    color: white; 
+    border: none; /* quito el borde */
+    padding: 10px 20px; 
+    border: 1px solid #434343;
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-weight: bold; /* Texto en negrita */
+    font-weight: bold;
+    background: linear-gradient(to bottom, #5e5e5e, #2a2a2a);
+    box-shadow: inset 0px 1px 1px #353535;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Efecto hover para el botón */
 input[type="submit"]:hover {
-    background-color: #ff7e42; /* Color al pasar el ratón */
+    background: linear-gradient(to top, #5e5e5e, #2a2a2a); /* Color al pasar el ratón */
 }

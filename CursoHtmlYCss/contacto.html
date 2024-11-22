@@ -39,33 +39,36 @@
                         <h1 id="titulito">Contáctenos</h1>
                         <ul>
                             <li>
-                               <label for="nombre">Escriba su nombre</label>
-                               <input type="text" id="nombre" name="nombre">
+                                <img src="./Imagenes/icon-nombre.png" alt="fotoNombre">
+                               
+                                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required list="nombres">
+                               <datalist id="nombres">
+                                    <option value="alex">
+                                    <option value="juan">
+                                    <option value="ana">
+                                    <option value="pedro">
+                                </datalist>
+                               <label for="">*</label>
                             </li>
                             <li>
-                                <label for="email">Escriba su email:</label><br>
-                                <input type="email" id="email" name="email">
+                                <img src="./Imagenes/icon-correo.png" alt="mensaje">
+                                <input type="email" id="email" name="email" placeholder="Escriba su email" required>
+                                <label for="">*</label>
                             </li>
                             <li>
-                                <label for="">Escriba su mensaje:</label>
-                                <textarea name="mensaje" id="mensaje"></textarea>
+                                <img src="./Imagenes/icon-mensaje.png" alt="mensaje">
+                                <textarea name="mensaje" id="mensaje" placeholder="Su mensaje...."></textarea>
                             </li>
                             <input type="submit" value="Enviar">
-                            
-
-
                         </ul>
-                        
                     </form>
-                
-
                 </div>
            </main>
         
         <div class="linea"></div>
         <footer>
             <p>HTML5 y CSS3.<br>
-            Diseño de interfaces web - 2DAW </p>
+            Impartido para: 2DAW - Diseño de interfaces web </p>
         </footer>
     </div>
 </body>
