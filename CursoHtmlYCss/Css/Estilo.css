@@ -32,6 +32,7 @@ header h1 {
     font-family: "fuenteTitulo";
 }
 
+
 hr {
     border-top: 10px solid black;
     height: 2px;
@@ -181,11 +182,11 @@ article {
 }
 
 article:nth-of-type(1) {
-    transform: rotate(-5deg);
+   /* transform: rotate(-5deg);*/
 }
 
 article:nth-of-type(3) {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
 }
 
 article:nth-of-type(1) img:nth-child(1) {
@@ -215,7 +216,7 @@ article:nth-of-type(3) img:nth-child(1) {
     width: 20px;
     position: absolute;
     top: -13%;
-    left: 14%
+    left: 15%
 }
 
 article:nth-of-type(3) img:nth-child(2) {
@@ -269,7 +270,6 @@ footer p {
 
 
 /*VIDEO.HTML*/
-
 main {
     display: flex;
     gap: 20px;
@@ -328,4 +328,104 @@ main {
 @font-face {
     font-family: "fuenteContenidos";
     src: url("../fuentes/Abel/Abel-Regular.ttf");
+}
+
+
+/* KEYFRAMES PARA LAS ANIMACIONES*/
+
+/* Animación para mover el logo */
+@keyframes mueveLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animación del logo */
+.mueveLogo {
+    animation: rotateAnimation 5s infinite;
+    display: inline-block;
+}
+
+
+/* Animación para mover la chincheta 1 */
+@keyframes mueveChincheta1 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 190px;
+    }
+}
+
+.chincheta1 {
+    position: absolute;
+    animation: mueveChincheta1 3s forwards;
+}
+
+/* Animación para rotar el primer móvil */
+@keyframes animArticle1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+.article1 {
+    animation: animArticle1 3s forwards;
+    animation-delay: 3s;
+}
+
+/* Animación para mover la chincheta 2 */
+@keyframes mueveChincheta2 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 120px;
+    }
+}
+
+.chincheta2 {
+    position: absolute;
+    animation: mueveChincheta2 3s forwards;
+    animation-delay: 6s;
+}
+
+/* Animación para mover la chincheta 3 */
+@keyframes mueveChincheta3 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 30px;
+    }
+}
+
+.chincheta3 {
+    position: absolute;
+    animation: mueveChincheta3 1s forwards;
+    animation-delay: 9s;
+}
+
+/* Animación para rotar el tercer móvil */
+@keyframes animArticle3 {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.article3 {
+    animation: animArticle3 3s forwards;
+    animation-delay: 12s;
 }
