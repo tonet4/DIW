@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.12 Responsiv</title>
+    <link rel="stylesheet" href="./estilo/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Menú</a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Coleccion</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Dirección</a></li>
+        </ul>
+    </nav>
+    <header>ENCABEZADO</header>
+    <div class="union">
+        <aside>AGENDA</aside>
+        <main>CUERPO</main>
+    </div>
+    <script>
+        var enlaceMenu;
+        function iniciarMenu() {
+            enlaceMenu = document.querySelector("nav>a");
+            enlaceMenu.addEventListener("click", despliegaMenu, false);
+        }
+        function despliegaMenu() {
+            document.querySelector("nav>ul").classList.toggle('desplegado');
+        }
+        window.addEventListener("load", iniciarMenu, false);
+    </script>
+    
+</body>
+</html>
