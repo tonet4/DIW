@@ -54,7 +54,10 @@ nav section {
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: center;
 }
+
+
 
 nav section img {
     width: 64px;
@@ -78,7 +81,7 @@ nav section a:hover {
     text-shadow: 0px 0px 5px #ff7e42; 
 }
 
-section:nth-child(4) {
+.page > section:nth-child(4) {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -92,7 +95,7 @@ section:nth-child(4) {
 }
 
 
-/* Estilo de los enlaces */
+/* E S T I L O S - E N L A C E S */
 
 
 nav section ul {
@@ -108,7 +111,6 @@ nav section ul {
     color: #fff;
     text-align: center;
     z-index: 1;
-    
    
 }
 
@@ -158,9 +160,6 @@ nav section ul li:first-child:before {
 }
 
 
-
-
-
 article {
     position: relative;
     display: flex;
@@ -171,9 +170,6 @@ article {
     max-width: 270px;
     height: 590px;
     font-family: "fuenteContenidos";
-
-
-
     border-image-source: url(../Imagenes/movil.png);
     border-image-slice: 70 20 50 20;
     border-width: 70px 20px 50px 20px;
@@ -181,9 +177,6 @@ article {
 
 }
 
-article:nth-of-type(1) {
-   /* transform: rotate(-5deg);*/
-}
 
 article:nth-of-type(3) {
     transform: rotate(3deg);
@@ -269,7 +262,7 @@ footer p {
 }
 
 
-/*VIDEO.HTML*/
+/* VIDEO.HTML */
 main {
     display: flex;
     gap: 20px;
@@ -320,6 +313,13 @@ main {
 }
 
 
+/*M E N U D E S P L E G A B L E */
+
+.menu-toggle {
+    display: none;
+}
+
+/* F U E N T E S*/
 @font-face {
     font-family: "fuenteTitulo";
     src: url("../fuentes/Luckiest_Guy/LuckiestGuy-Regular.ttf");
@@ -431,6 +431,9 @@ main {
 }
 
 
+
+/* R E S P O N S I V */
+
 @media (max-width: 1024px) {
     #page {
         width: 90%;          /* El ancho es el 90% del contenedor */
@@ -438,20 +441,18 @@ main {
     }
 
     header{
-        font-size: 0.7em;
+        font-size: 0.7em; /*Modifico tamaño letra*/
     }
 
     nav a {
-        margin-top: 0%;    /* Márgen superior del 0% */
-        margin-left: 8%;   /* Márgen izquierdo del 8% */
-        margin-right: 8%;  /* Márgen derecho del 8% */
-        margin-bottom: 2%; /* Márgen inferior del 2% */
+        margin-top: 0%;    /* Márgen*/
+        margin-left: 8%;   
+        margin-right: 8%;  
+        margin-bottom: 2%; 
     }
 }
 
-@media (max-width: 700px) {
-    
-
+@media (max-width: 700px) { 
     nav a {
         margin-top: 0%;   
         margin-left: 4%;   
@@ -459,6 +460,7 @@ main {
         margin-bottom: 1%; 
     }
 
+    /*Modifico el tamaño de los moviles y su contenido*/
     article{
         max-width: 30%;
     }
@@ -483,5 +485,65 @@ main {
         line-height: 1.2;
     }
 
+}
+
+@media (max-width: 476px) {
+    
+    .menu-toggle {
+        display: block; /* Mostrar el botón del menú cuando llegue a estos pixels */
+        font-size: 24px;
+        background-color: #0379c2;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px 0;
+    }
+    /*Cambio los nav a columna para que salgan debajo*/
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav section {
+        display: none;
+    }
+    /*Modifico el tamaño de los moviles y su contenido*/
+
+    article{
+        max-width: 26%;
+    }
+
+    article img:nth-child(2) {
+        width: 60px;
+    }
+
+    article:nth-of-type(2) img:nth-child(2) {
+        width: 60px;
+    }
+
+    article:nth-of-type(3) img:nth-child(2) {
+        width: 60px;
+    }
+    
+    article:nth-of-type(1) img:nth-child(1), article:nth-of-type(2) img:nth-child(1), article:nth-of-type(3) img:nth-child(1){
+       display: none;
+    }
+
+    article p {
+        line-height: 1.2;
+        font-size: 10px;
+    }
+
+    article h3{
+        font-size: 12px;
+    }
+
+    .page > section:nth-child(4){
+        gap: 30px;
+    }
 
 }
+

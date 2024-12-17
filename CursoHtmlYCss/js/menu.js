@@ -1,13 +1,13 @@
-var enlaceMenu;
+const menuToggle = document.querySelector('.menu-toggle');
+const sections = document.querySelectorAll('nav section');
 
-function iniciarMenu() {
-	enlaceMenu = document.querySelector("nav>a");
-	enlaceMenu.addEventListener("click", despliegaMenu, false);
-}
-
-function despliegaMenu()
-{
-	document.querySelector("#page>nav>ul").classList.toggle('desplegado');
-}
-
-window.addEventListener("load", iniciarMenu, false);
+menuToggle.addEventListener('click', () => {
+    sections.forEach(section => {
+        if (section.style.display === 'flex') {
+            section.style.display = 'none'; // Ocultar las secciones
+        } else {
+            section.style.display = 'flex'; // Mostrar las secciones
+            section.style.flexDirection = 'column'; // Asegurarse de que estén en columna
+        }
+    });
+});
