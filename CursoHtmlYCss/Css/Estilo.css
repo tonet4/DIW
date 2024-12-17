@@ -348,7 +348,7 @@ main {
 
 /* Animación del logo */
 .mueveLogo {
-    animation: rotateAnimation 5s infinite;
+    animation: mueveLogo 5s infinite;
     display: inline-block;
 }
 
