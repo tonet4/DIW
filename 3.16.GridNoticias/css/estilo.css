@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    padding-top: 20px;
+    margin-left: 250px;
+}
+.grid-container {
+    display: grid;
+    grid-gap: 10px; 
+    grid-template-columns: repeat(4, 250px); 
+    grid-template-rows: repeat(2, 200px); 
+    justify-content: start; 
+    padding: 20px;
+    margin-left: 230px; 
+}
+
+.grid-container P, .grid-container2 P{
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(255, 255, 255); 
+    text-align: right; 
+    display: inline-block; 
+    padding: 4px 8px; 
+    margin: 4px; 
+    border-radius: 5px; 
+}
+
+.item1 {
+    background-image: url("../imgs/imgs/mujer.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 1; 
+    grid-row: 1 / span 2; 
+}
+
+.item2 {
+    background-image: url("../imgs/imgs/montania.jpeg");
+    background-size: cover;
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 1; 
+}
+
+.item3 {
+    background-image: url("../imgs/imgs/zapas.jpeg");
+    background-size: cover;
+    grid-column: 2 / span 1; 
+   
+}
+
+.item4 {
+    background-image: url("../imgs/imgs/mar.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 3 ; 
+    grid-row: 1 / span 2; 
+}
+
+.item5 {
+    background-image: url("../imgs/imgs/pc.jpeg");
+    background-size: cover;
+    grid-column: 4;
+    grid-row: 1 / span 1;
+}
+
+.item6 {
+    background-image: url("../imgs/imgs/patines.jpeg");
+    background-size: cover;
+
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+}
+
+
+
+.grid-container2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 250px); 
+    grid-template-rows: repeat(3, 200px);
+    justify-content: start; 
+    padding: 20px;
+    margin-left: 230px;
+}
+
+
+
+.item7{
+    background-image: url("../imgs/imgs/city.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / span 1; 
+    grid-row: 1 / span 1;
+
+
+}
+
+.item8{
+    background-image: url("../imgs/imgs/muchos.jpeg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 1;
+    
+}
+.item9{
+    background-image: url("../imgs/imgs/bici.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 3 / span 1;
+    grid-row: 1/ span 1;
+    
+}
+
+.item10{
+    background-image: url("../imgs/imgs/peces.jpeg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / span 1 ; 
+    grid-row: 2 / span 1; 
+    
+}
+
+.item11{
+    background-image: url("../imgs/imgs/arte.jpeg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    
+}
+
+.item12{
+    background-image: url("../imgs/imgs/libros.jpeg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
