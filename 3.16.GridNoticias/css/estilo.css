@@ -6,16 +6,15 @@
 
 h2{
     padding-top: 20px;
-    margin-left: 250px;
+    text-align: center;
 }
 .grid-container {
     display: grid;
     grid-gap: 10px; 
     grid-template-columns: repeat(4, 250px); 
     grid-template-rows: repeat(2, 200px); 
-    justify-content: start; 
+    justify-content: center; 
     padding: 20px;
-    margin-left: 230px; 
 }
 
 .grid-container P, .grid-container2 P{
@@ -26,6 +25,16 @@ h2{
     padding: 4px 8px; 
     margin: 4px; 
     border-radius: 5px; 
+}
+
+/*SOMBREADO CAJAS*/
+
+.grid-item, .grid-item2 {
+    transition: box-shadow 1s ease-in-out; 
+}
+
+.grid-item:hover, .grid-item2:hover {
+    box-shadow: 0 0 15px 10px rgba(128, 128, 128, 0.6); 
 }
 
 .item1 {
@@ -80,9 +89,8 @@ h2{
     grid-gap: 10px;
     grid-template-columns: repeat(3, 250px); 
     grid-template-rows: repeat(3, 200px);
-    justify-content: start; 
+    justify-content: center; 
     padding: 20px;
-    margin-left: 230px;
 }
 
 
@@ -138,4 +146,103 @@ h2{
     background-size: cover;
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+
+    .grid-container { 
+        justify-content: center;
+        grid-template-columns: repeat(2, 170px); 
+        grid-template-rows: repeat(4, 120px);
+        
+    }
+
+    .item3{
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .item4{
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 2;
+    }
+
+    .item5{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .item6{
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    .grid-container2 {
+        justify-content: center;
+        grid-template-columns: repeat(2, 170px); 
+        grid-template-rows: repeat(3, 120px);
+    }
+
+    .item9{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .item10{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .item11 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .item12 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+    
+    .grid-container, .grid-container2 {
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(6, 150px); 
+    
+    }
+
+    .item1, .item7{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .item2, .item8{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .item3, .item9 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .item4, .item10{
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    .item5, .item11{
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+
+    .item6, .item12{
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+
+
 }
