@@ -1,0 +1,40 @@
+/********************************************************************
+  ************************* G A L E R I A - A **************************************
+  *********************************************************************/
+
+  .titulo-equip{
+    text-align: center;
+    color: var(--clr1);
+    text-decoration: underline;
+    margin: 30px 0;
+    font-family: "fuente3";
+  }
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    gap: 15px; /* Espacio entre las imágenes */
+    margin: 20px;
+}
+
+.fotos img {
+    width: 100%; /* Las imágenes ocupan todo el ancho de la celda */
+    height: 100%; 
+    object-fit: cover; /* Hace que las imágenes cubran el área sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados en las imágenes */
+}
+
+/* R E S P O N S I V */
+
+@media (max-width: 768px) {
+  .fotos {
+      grid-template-columns: repeat(1, 1fr); /* Dos columnas en móviles */
+      gap: 10px; /* Reduce el espacio entre las imágenes */
+      margin: 10px;
+  }
+
+  .fotos img {
+      border-radius: 5px; /* Bordes más pequeños en móviles */
+  }
+
+}

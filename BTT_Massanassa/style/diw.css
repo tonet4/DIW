@@ -1,0 +1,29 @@
+
+body{
+    background: linear-gradient(135deg,var(--clr1), var(--clr2), var(--clr3), var(--clr4));
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+section{
+    text-align: left;
+    margin: 40px;
+    border: 2px dotted var(--clr1);
+    background-color: var(--clr3);
+}
+
+/*Fondo del body con cambio de color*/
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+section h2{
+    padding: 10px;
+}
+
+section p{
+    padding: 10px;
+    border-bottom: 1px dotted var(--clr1);
+}
+
