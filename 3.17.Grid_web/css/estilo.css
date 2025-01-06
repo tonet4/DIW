@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1800px; /* Defino el ancho máximo */
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+/* NAV */
+nav {
+    margin: 20px;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+}
+
+.menu-items p {
+    background-color: grey;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    display: grid;
+    grid-template-rows: repeat(2, 70px);
+    grid-template-columns: repeat(1, 500px);
+    justify-content: start;
+    margin: 10px 20px 0 20px;
+    padding-top: 20px;
+    background-color: rgb(111, 98, 98);
+}
+
+header h3, h1 {
+    padding-left: 20px;
+}
+
+/* SECTION */
+section{
+    display: grid;
+    grid-template-rows: repeat(1, 70px);
+    grid-template-columns: repeat(1, 500px);
+    background-color: black;
+    margin: 10px 20px 0px 20px;
+    
+}
+
+section p {
+    color: white;
+    font-size: 20px;
+    padding: 20px 0 0 20px;
+    font-weight: bold;
+}
+
+/* ARTICLE */
+article{
+    display: grid;
+    grid-template-rows: repeat(1, 220px);
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 20px 0 20px;
+    grid-gap: 10px;
+}
+
+aside{
+    background-color: grey;
+    padding: 10px 0 0 15px;
+    font-size: 20px;
+    width: 100%;
+}
+
+main{
+    background-color: rgb(189, 163, 163);
+    padding: 10px 0 0 15px;
+    width: 100%;
+    
+}
+
+/* SECTION 2*/
+section:nth-of-type(2) {
+    background-color: rgb(111, 108, 114);
+}
+
+footer{
+    display: grid;
+    grid-template-rows: repeat(1, 80px);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10px 20px 0 20px;
+    justify-content: space-between;
+    grid-gap: 5px;
+    background-color: rgb(124, 132, 132);
+}
+
+/* FOOTER */
+footer p{
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    padding-top: 5px;
+    margin: 10px 10px 10px 10px;
+    padding-top: 20px;
+    
+}
+
+/* RESPONSIV */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 10px; 
+    }
+    
+    nav{
+        margin: 10px;
+    }
+    
+    /* Oculto los items del nav*/
+    .menu-items {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: grey;
+        z-index: 10;
+        flex-direction: column;
+    }
+
+    /* Al hacer hover en la hamburguesa, aparecen los items*/
+    nav:hover .menu-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Doy visibilidad a la hamburguesa*/
+    .hamburger {
+        display: grid;
+        grid-template-columns:1fr;
+
+    }
+
+    .menu-items p {
+        border-bottom: 1px solid white;
+    }
+
+    .menu-items p:last-child {
+        border-bottom: none;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        padding-top: 10px;
+    }
+
+    header h3 {
+        padding-top: 15px;
+    }
+
+    /* Oculto el primer section */
+    section:nth-of-type(1) {
+        display: none;
+    }
+
+    section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    article {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin: 10px;
+    }
+
+    /* Cambio de posicio el main con el aside */
+    article main{
+        grid-row: 1;
+    }
+
+    article aside{
+        grid-row: 2;
+        padding: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px;
+    }
+
+    footer p {
+        padding: 20px;
+    }
+
+}
