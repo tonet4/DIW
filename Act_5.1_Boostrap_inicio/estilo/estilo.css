@@ -1,3 +1,27 @@
 .row>[class^="col"]{
     border: 1px solid black;
 }
+
+.uno {
+    background-color: rgb(113, 234, 113);
+}
+
+.dos {
+    background-color: red;
+}
+
+.tres {
+    background-color: rgb(230, 113, 230);
+}
+
+.cuatro {
+    background-color: rgb(244, 244, 161);
+}
+
+.seis {
+    background-color: blue;
+}
+
+.diez{
+    background-color: rgb(80, 232, 80);
+}
