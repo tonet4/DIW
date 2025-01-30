@@ -1,0 +1,22 @@
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 60px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    color: rgb(241, 137, 51);
+    
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 217, 127);
+}

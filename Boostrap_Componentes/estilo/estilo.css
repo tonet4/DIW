@@ -1,0 +1,28 @@
+.row{
+    border: 1px dotted black;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    margin: 0; /* Elimina el margen del body */
+    padding: 10px; /* Agrega un padding alrededor del body para asegurar espacio */
+    
+}
+.container-fluid {
+    margin-right: 10px; /* Aquí el margen se aplicará correctamente */
+}
+
+h1{
+    text-align: center;
+    color: #e4924f;
+}
+
+h3{
+    text-align: center;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
