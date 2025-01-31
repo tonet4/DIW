@@ -20,3 +20,23 @@
     justify-content: center;
     background-color: rgb(255, 217, 127);
 }
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card, .card-body, .list-group-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cuerpoMain {
+    background-image: url(../img/estadio2.jpg);
+   
+    
+}
