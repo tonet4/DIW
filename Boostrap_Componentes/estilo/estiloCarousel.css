@@ -29,22 +29,17 @@ html, body {
     border-bottom: 2px solid black;
 }
 
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carousel-inner p{
+    color: rgb(0, 0, 0);
 }
 
-.card, .card-body, .list-group-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.carousel{
 }
 
 .cuerpoMain {
     background-image: url(../img/estadio2.jpg);
+    display: flex;
+    justify-content: center;
    
     
 }
