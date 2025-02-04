@@ -29,17 +29,22 @@ html, body {
     border-bottom: 2px solid black;
 }
 
-.carousel-inner p{
-    color: rgb(0, 0, 0);
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.carousel{
+.card, .card-body, .list-group-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .cuerpoMain {
     background-image: url(../img/estadio2.jpg);
-    display: flex;
-    justify-content: center;
    
     
 }
@@ -68,23 +73,12 @@ html, body {
 }
 
 
-.subTitulo{
+.listado-entradas{
     display: flex;
-    justify-content: center;
-    background-color:rgb(255, 217, 127);
-    text-align: center;
-    margin-left: 0;
-    padding-right: 0;
+    list-style: none; 
+    padding-left: 0;
 }
 
-.subTitulo h3{
-   color: blue;
-}
-
-.carousel-item p{
-    background-color: white;
-}
-.carousel-item h5{
-    background-color: white;
-    color: black;
+.card-body {
+    text-align: left !important; /* Asegura que el contenido dentro de .card-body se alinee a la izquierda */
 }
