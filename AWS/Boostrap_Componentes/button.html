@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Boostrap "button"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo/estilo.css">
+</head>
+<body>
+    <h1>Botones Boostrap</h1>
+    <h3>--Hazme responsiv--</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-12 py-2">Predefinidos</div>
+            <div class="col-sm-3  col-12 py-2">
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+            <div class="col-sm-3  col-12 py-2">
+                <button type="button" class="btn btn-warning">Warning</button>
+            </div>
+            <div class="col-sm-3 col-12 py-2">
+                <button type="button" class="btn btn-dark">Dark</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-3 py-2">Link, submit, reset, enviar</div>
+            <div class="col-sm-2 py-2">
+                <a class="btn btn-primary" href="#" role="button">Link</a>
+            </div>
+            <div class="col-sm-2 py-2">
+                <input class="btn btn-primary" type="button" value="Input">
+            </div>
+            <div class="col-sm-2 py-2">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>
+            <div class="col-sm-2  py-2">
+                <input class="btn btn-primary" type="reset" value="Reset">
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-3 py-2">Grandes, Medianos y pequeños</div>
+            <div class="col-sm-3 py-2">
+                <button type="button" class="btn btn-lg btn-outline-danger">Boton grande</button>
+            </div>
+            <div class="col-sm-3 py-2">
+                <button type="button" class="btn btn-primary">Botón normal</button>
+            </div>
+            <div class="col-sm-3 py-2">
+                <button type="button" class="btn btn-secondary btn-sm">Boton pequeño</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-3 titulo py-2">Grupo de botones</div>
+            <div class="col-12 col-md-9 py-2">
+                <div class="btn-group  d-block d-sm-none btn-group-vertical" role="group" >
+                    <button type="button" class="btn btn-danger">Left</button>
+                    <button type="button" class="btn btn-warning">Middle</button>
+                    <button type="button" class="btn btn-success">Right</button>
+                </div>
+                <div class="btn-group  d-none d-sm-flex" role="group">
+                    <button type="button" class="btn btn-danger">Left</button>
+                    <button type="button" class="btn btn-warning">Middle</button>
+                    <button type="button" class="btn btn-success">Right</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-12 col-md-3 py-2 d-block d-sm-none">Menu desplegable</div>
+            <div class="col-md-9 col-12 py-2 d-block d-sm-none">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-3 py-2 d-none d-sm-block">Menu vertical</div>
+            <div class="col-12 col-md-9 py-2 d-none d-sm-block">
+                <div class="btn-group dropend">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+            </div>
+        
+        
+        
+        </div>
+        
+            
+            
+       
+
+        
+    </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

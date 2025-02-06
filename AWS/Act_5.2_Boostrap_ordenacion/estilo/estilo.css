@@ -1,0 +1,40 @@
+.row>[class^="col"]{
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header, .footer{
+    background-color: rgb(80, 231, 80);
+}
+
+.fila1 {
+    background-color: #1892de;
+
+}
+
+.fila3{
+    background-color: aquamarine;
+}
+
+.fila2{
+background-color: #a1b3be;
+}
+
+.fila4{
+    background-color: #e4924f;
+}
+
+h1{
+    text-align: center;
+    color: #e4924f;
+}
+
+body {
+    margin: 0; /* Elimina el margen del body */
+    padding: 10px; /* Agrega un padding alrededor del body para asegurar espacio */
+    
+}
+.container-fluid {
+    margin-right: 10px; /* Aquí el margen se aplicará correctamente */
+}

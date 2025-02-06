@@ -1,0 +1,90 @@
+html, body {
+    height: 100%; /* Asegura que tanto el html como el body ocupen el 100% de la altura */
+    margin: 0; /* Elimina los márgenes por defecto */
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 60px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    color: rgb(241, 137, 51);
+    text-align: center;
+    
+    
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 217, 127);
+    border-bottom: 2px solid black;
+}
+
+.carousel-inner p{
+    color: rgb(0, 0, 0);
+}
+
+.carousel{
+}
+
+.cuerpoMain {
+    background-image: url(../img/estadio2.jpg);
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.footer{
+    background-color: rgb(47, 45, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+
+.footer h3{
+    color: white;
+}
+
+.logoFooter{
+    width: 60px;
+
+}
+
+.card{
+    border: 1px solid black;
+}
+
+
+.subTitulo{
+    display: flex;
+    justify-content: center;
+    background-color:rgb(255, 217, 127);
+    text-align: center;
+    margin-left: 0;
+    padding-right: 0;
+}
+
+.subTitulo h3{
+   color: blue;
+}
+
+.carousel-item p{
+    background-color: white;
+}
+.carousel-item h5{
+    background-color: white;
+    color: black;
+}
