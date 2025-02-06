@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes "Modal"</title>
+    <!-- Enlace al CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo personalizado para posicionar el badge */
+        .position-relative {
+            position: relative;
+        }
+        .badge-position {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(20%, 20%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Modal</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#importantModal">
+                Mostrar Mensaje
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="importantModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Mensaje importante</h5>
+                </div>
+                <div class="modal-body">
+                    Cerramos a las 21h
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
