@@ -1,0 +1,178 @@
+/********************************************************************
+************************* R U T A S **************************************
+*********************************************************************/
+
+.rutas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden; /* Para asegurarnos de que no se ve el contenido */
+}
+
+.rutas h2{
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.rutas img{
+  width: 60%;
+}
+
+.rutas li {
+  text-align: center;
+  list-style-type: none;
+  opacity: 0; /* Inicia con la caja invisible */
+  transform: translateX(-100%); /* Inicialmente, las cajas están fuera de la pantalla por el lado izquierdo */
+  animation: movimientoIzq 1.5s forwards; /* Animación para hacerlas aparecer, tardan 1.5s en aparecer, con forward conserva el estilo */
+  margin-bottom: 20px;
+}
+
+
+/* Animación */
+@keyframes movimientoIzq {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Inicia fuera de la pantalla a la izquierda */
+  }
+  50% {
+    opacity: 0.5; /* Hace que la caja se haga más visible */
+    transform: translateX(0); /* Se mueve hacia su posición final */
+  }
+  100% {
+    opacity: 1; /* Al final, la caja está completamente visible */
+    transform: translateX(0); /* Se queda en su lugar final */
+  }
+}
+
+/* Para las cajas siguientes, agregamos un retraso en la animación para hacer que lleguen una por una */
+.rutas li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.rutas li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.rutas li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.rutas li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.rutas li:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.rutas ul li ul li {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra de la caja*/
+  background: radial-gradient( var(--clr4), var(--clr3), var(--clr2), var(--clr1));
+}
+
+
+/* Oculto los detalles inicialmente */
+.ruta-detalles, .ruta-detalles2 {
+  display: none; 
+}
+
+.ruta-detalles3, .ruta-detalles4, .ruta-detalles5 {
+  display: none; 
+}
+
+input{
+  display: none;
+}
+
+.toggle-ruta:checked + .ver-ruta + .ruta-detalles {
+  display: block; /* Mostrar los detalles cuando el checkbox esté marcado */
+}
+
+.toggle-ruta2:checked + .ver-ruta2 + .ruta-detalles2 {
+  display: block; /* Mostrar los detalles cuando el checkbox esté marcado */
+}
+
+.toggle-ruta3:checked + .ver-ruta3 + .ruta-detalles3, .toggle-ruta4:checked + .ver-ruta4 + .ruta-detalles4, .toggle-ruta5:checked + .ver-ruta5 + .ruta-detalles5 {
+  display: block; /* Mostrar los detalles cuando el checkbox esté marcado */
+}
+
+/* Estilo para el botón de "Visualizar Ruta" */
+.ver-ruta, .ver-ruta2, .ver-ruta3,.ver-ruta4, .ver-ruta5 {
+  background-color: var(--clr1); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Elimina bordes predeterminados */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra de la caja*/
+  cursor: pointer; /* Cambia el cursor*/
+  transition: transform 0.2s, box-shadow 0.2s; /* Animación suave */
+  padding: 5px;
+}
+
+.ver-ruta:hover, .ver-ruta2:hover, .ver-ruta3:hover,.ver-ruta4:hover, .ver-ruta5:hover{
+  color: white;
+  background-color: var(--clr2); /* Cambia color de fondo */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra caja*/
+  transform: translateY(-2px); /* Eleva el botón */
+}
+
+.ver-ruta:active, .ver-ruta2:active, .ver-ruta3:active,.ver-ruta4:active, .ver-ruta5:active{
+  transform: translateY(2px); /* Botón parece presionado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* R E S P O N S I V */
+
+@media (max-width: 768px) {
+  /* contenedor principal de rutas */
+  .rutas {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  /*tamaño de las imágenes */
+  .rutas img {
+    width: 80%; /* Bajo el ancho de la imagen */
+  }
+
+  /* Ajusta el diseño de las cajas internas de cada ruta */
+  .rutas ul li ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Menos sombra */
+    gap: 5px; /* menos espacio interno */
+  }
+
+  /* Texto centrado y ajustado */
+  .rutas h2 {
+    font-size: 1.2em; /* Menos tamaño de letra */
+  }
+
+  /* Botones de Visualizar Ruta */
+  .ver-ruta, .ver-ruta2, .ver-ruta3, .ver-ruta4, .ver-ruta5 {
+    font-size: 0.9em; /* Menos tamaño de letra */
+    padding: 8px 12px; 
+  }
+
+  /* Ajuste de las listas */
+  .rutas li {
+    opacity: 1; /* Opcional: evita animaciones para mejor rendimiento en móviles */
+    transform: none; /* Evita transformaciones */
+    animation: none; /* Evita animaciones */
+    margin-bottom: 10px; /* Espaciado menor entre elementos */
+  }
+}
