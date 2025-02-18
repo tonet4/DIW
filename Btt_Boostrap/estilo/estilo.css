@@ -1,0 +1,115 @@
+:root {
+  --clr1: #81a8be;
+  --clr2: #dfd0c0;
+  --clr3: #ceaf82;
+  --clr4: #343932;
+}
+
+/* F U E N T E S */
+@font-face {
+  font-family: "fuente1";
+  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Light.ttf);
+}
+
+@font-face {
+  font-family: "fuente2";
+  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+}
+
+@font-face {
+  font-family: "fuente3";
+  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Bold.ttf);
+}
+
+:root {
+  --color-forest: #2D5A27;
+  --color-moss: #8B9D77;
+  --color-earth: #4A3F35;
+  --color-stone: #D3D3D3;
+}
+
+
+/*TITULO PRINCIPAL INDEX*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../img/fondo2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+
+
+/* GIRO LOGO */
+
+@keyframes giro {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.navbar img {
+  animation: giro 1s ease-in-out;
+}
+
+.navbar img {
+  animation: giro 1.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+
+
+
+
+
+
+@keyframes movimientoIzq {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.rutas-item {
+  opacity: 0;
+  animation: movimientoIzq 1s ease-out forwards;
+}
+
+/* Retrasos escalonados para cada .rutas-item */
+.rutas-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.rutas-item:nth-child(2) {
+  animation-delay: 1s;
+}
+.rutas-item:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.rutas-item:nth-child(4) {
+  animation-delay: 2s;
+}
+.rutas-item:nth-child(5) {
+  animation-delay: 2.5s;
+}
