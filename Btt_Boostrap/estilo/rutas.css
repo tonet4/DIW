@@ -1,0 +1,64 @@
+/********************************************************************
+*************************R U T A S**************************************
+*********************************************************************/
+
+
+
+.rutas-bici p{
+    font-family: "fuente2";
+  }
+  
+  .rutas-bici h5{
+    font-family: "fuente1";
+  }
+  
+  .rutas-bici button, .rutas-bici a{
+    font-family: "fuente1";
+    background-color: var(--clr2) !important;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  .rutas-bici button:hover, .rutas-bici a:hover {
+    background-color: var(--clr4) !important;
+  }
+  
+  .rutas-bici span{
+    font-weight: bold;
+    font-family: "fuente2";
+  }
+  
+  
+  
+  /*ANIMACIÓN RUTAS*/
+  
+  @keyframes movimientoIzq {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .rutas-item {
+    opacity: 0;
+    animation: movimientoIzq 1s ease-out forwards;
+  }
+  
+  /* Retrasos escalonados para cada .rutas-item */
+  .rutas-container .rutas-item:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .rutas-container .rutas-item:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .rutas-container .rutas-item:nth-child(3) {
+    animation-delay: 1.5s;
+  }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web sobre la penya ciclista Btt Massanassa">
+    <title>BTT Massanassa</title>
+    <!-- Enlace al CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <link rel="stylesheet" href="./estilo/estilo.css">
+   <link rel="stylesheet" href="./estilo/galeria.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--color-forest); ">
+    <div class="container-fluid">
+      <a href="index.html">
+        <img src="./img/logo3.webp" class="navbar-brand img-fluid" alt="logo" style="max-width: 70px;">
+      </a>
+      <a class="navbar-brand" href="#">BTT MASSANASSA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rutas.html">RUTAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equipacion.html">EQUIPACIÓN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="galeria.html">
+              <i class="fas fa-bicycle me-1"></i> GALERÍA
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-5">
+    <h2 class="section-title">Galería</h2>
+    <div class="row g-4">
+      <!-- Carta 1 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <!-- Input checkbox oculto para controlar el flip -->
+          <input type="checkbox" id="flip1" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <!-- Cara frontal -->
+            <div class="flip-card-front">
+              <!-- Al hacer clic en la cara frontal se marca el checkbox -->
+              <label for="flip1" class="w-100 h-100 m-0 p-0">
+                <img src="./img/ciclo4.webp" alt="Marcha Btt La pobla de Vallbona 24">
+                <div class="flip-card-title">Marcha Btt La pobla de Vallbona 24</div>
+              </label>
+            </div>
+            <!-- Cara trasera -->
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <!-- Label que envuelve el párrafo y la imagen para que al hacer clic se vuelva a dar la vuelta -->
+                <label for="flip1" class="flip-back-label">
+                  <p>Etapa 20 Marcha Volta a la pobla de Vallbona. Organizada por Arrocerias Pons</p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <!-- Botón independiente para abrir otra pestaña -->
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carta 2 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <input type="checkbox" id="flip2" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <label for="flip2" class="w-100 h-100 m-0 p-0">
+                <img src="./img/bic4i.webp" alt="Volta per la marchal">
+                <div class="flip-card-title">Volta per la marchal</div>
+              </label>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <label for="flip2" class="flip-back-label">
+                  <p>Segunda vuelta a la marchal, patrocinado por Hacendado</p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carta 3 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <input type="checkbox" id="flip3" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <label for="flip3" class="w-100 h-100 m-0 p-0">
+                <img src="./img/biciyo.webp" alt="Marcha El Rebollar 24">
+                <div class="flip-card-title">Marcha El Rebollar 24</div>
+              </label>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <label for="flip3" class="flip-back-label">
+                  <p>Si quieres ver las fotos de la 10º Edición de la marcha El Rebollar, Mes Esport. Pulsa en ver más.
+                  </p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carta 4 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <input type="checkbox" id="flip4" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <label for="flip4" class="w-100 h-100 m-0 p-0">
+                <img src="./img/bici1.webp" alt="Marcha Btt La pobla de Vallbona 24">
+                <div class="flip-card-title">Marcha Btt Benaguacil 24</div>
+              </label>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <label for="flip4" class="flip-back-label">
+                  <p>Etapa 20 Marcha Volta a Benaguacil. Organizada por Arrocerias Pons.</p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carta 5 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <input type="checkbox" id="flip5" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <label for="flip5" class="w-100 h-100 m-0 p-0">
+                <img src="./img/bici2.webp" alt="Marcha Btt La pobla de Vallbona 24">
+                <div class="flip-card-title">Volta per la marchal</div>
+              </label>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <label for="flip5" class="flip-back-label">
+                  <p>Etapa 20 Marcha Volta a Dos aguas. Organizada por Arrocerias Pons.</p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carta 6 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <input type="checkbox" id="flip6" class="flip-check d-none">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <label for="flip6" class="w-100 h-100 m-0 p-0">
+                <img src="./img/bici3.webp" alt="Marcha Btt La pobla de Vallbona 24">
+                <div class="flip-card-title">Marcha Dos Aguas 24</div>
+              </label>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-content">
+                <label for="flip6" class="flip-back-label">
+                  <p>Etapa 20 Marcha Volta a la pobla de Vallbona. Organizada por Arrocerias Pons.</p>
+                  <img src="./img/logo3.webp" alt="Logo" class="my-3" style="max-width: 100px;">
+                </label>
+                <a href="" target="_blank">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4 pb-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Sección de información sobre bicicletas -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <h4>BTT MASSANASSA</h4>
+            <p>
+              Calle mercat, 25. Massanassa
+            </p>
+            <p>
+              info@bttmassanassa.com
+            </p>
+          </div>
+          <!-- Sección del logo -->
+          <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+            <!-- Si el logo es un enlace, asegúrate de incluir un alt descriptivo o envuélvelo en un enlace con aria-label -->
+            <a href="/" aria-label="Página de inicio">
+              <img src="./img/logo3.webp" alt="Logo BikePasion - Ir a la página de inicio" class="img-fluid"
+                style="max-height: 100px;">
+            </a>
+          </div>
+          <!-- Sección de redes sociales -->
+          <div class="col-12 col-md-4 text-md-end">
+            <h4>Síguenos</h4>
+            <a href="https://www.facebook.com" class="text-white me-3" target="_blank" aria-label="Facebook">
+              <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.twitter.com" class="text-white me-3" target="_blank" aria-label="Twitter">
+              <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.instagram.com" class="text-white me-3" target="_blank" aria-label="Instagram">
+              <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="#" class="text-white fs-4" aria-label="Información sobre DIW">
+              <img src="./img/diw.webp" alt="Logo DIW - Información"
+                style="width: 34px; height: 34px; filter: brightness(0) invert(1);">
+            </a>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col text-center">
+            <small>2025 Antonio Esteban Lorenzo</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+      
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

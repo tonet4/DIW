@@ -1,56 +1,33 @@
+/* C O L O R E S */
 :root {
-  --clr1: #81a8be;
-  --clr2: #dfd0c0;
-  --clr3: #ceaf82;
-  --clr4: #343932;
+  --clr1: #0D7C66;
+  --clr2: #41B3A2;
+  --clr3: #BDE8CA;
+  --clr4: #299958;
+  --color-forest: #2D5A27;
 }
 
 /* F U E N T E S */
 @font-face {
   font-family: "fuente1";
-  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Light.ttf);
+  src: url(../fuente/Sigmar/Sigmar-Regular.ttf);
 }
 
 @font-face {
   font-family: "fuente2";
-  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+  src: url(../fuente/Exo_2/Exo2-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "fuente3";
-  src: url(../fuente/Montserrat_Alternates/MontserratAlternates-Bold.ttf);
+  src: url(../fuente/Exo_2/Exo2-Italic-VariableFont_wght.ttf);
 }
 
-:root {
-  --color-forest: #2D5A27;
-  --color-moss: #8B9D77;
-  --color-earth: #4A3F35;
-  --color-stone: #D3D3D3;
+/* G E N E R A L */
+
+body {
+  background: radial-gradient(circle, #e6f7ee 20%, white 100%) !important;
 }
-
-
-/*TITULO PRINCIPAL INDEX*/
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../img/fondo2.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 0;
-}
-
-.feature-icon {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.75rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-
 
 /* GIRO LOGO */
 
@@ -63,6 +40,50 @@
   }
 }
 
+/*TITULOS SECCIONES*/
+.section-title {
+  color: var(--clr4) !important;
+  font-size: 2.5rem  !important;
+  text-align: center  !important;
+  margin-bottom: 2rem !important;
+  font-weight: 600  !important;
+  position: relative !important;
+  padding-bottom: 15px  !important;
+  font-family: "fuente1";
+  text-shadow: 2px 2px 4px black !important;
+}
+
+/*N A V*/
+.navbar-brand {
+  color: var(--clr3) !important;
+  font-weight: bold !important;
+  font-family: 'fuente1' !important;
+  font-size: 2rem !important;
+  text-shadow: 2px 2px 4px black !important;
+}
+
+.navbar-nav a{
+  color: var(--clr3) !important;
+  font-weight: bold !important;
+  text-shadow: 2px 2px 4px black !important;
+  font-family: 'fuente1' !important;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: var(--clr1) !important;
+  text-shadow: 4px 4px 8px black !important;
+  transform: scale(1.1) rotate(2deg);
+}
+
+.nav-link.active {
+  color: var(--clr3) !important;
+  text-shadow: 4px 4px 8px black !important;
+  transform: scale(1.1) rotate(2deg) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
+
 .navbar img {
   animation: giro 1s ease-in-out;
 }
@@ -72,44 +93,51 @@
 }
 
 
+/*FOOTER*/
+
+footer h4{
+  font-family: "fuente1" !important;
+}
+
+footer p{
+  font-family: "fuente2" !important;
+}
 
 
 
+/* RESPONSIV NAV */
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem !important;
+    padding-bottom: 10px !important;
 
-@keyframes movimientoIzq {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
   }
-  50% {
-    opacity: 0.5;
-    transform: translateX(0);
+
+  .navbar-nav a:hover {
+    color: var(--clr1) !important;
+    text-shadow: 2px 2px 4px black !important;
+    text-decoration: underline !important;
+    transform: none !important;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+
+  .navbar-nav a:hover {
+    background-color: var(--clr1) !important;
+    color: var(--clr4) !important;
+    text-shadow: none !important;
+    transform: none !important;
+  }
+
+  .nav-link.active {
+    color: var(--clr1) !important;
+    text-shadow: none !important;
+    transform: none !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid var(--clr1) !important;
   }
 }
 
-.rutas-item {
-  opacity: 0;
-  animation: movimientoIzq 1s ease-out forwards;
-}
 
-/* Retrasos escalonados para cada .rutas-item */
-.rutas-item:nth-child(1) {
-  animation-delay: 0.5s;
-}
-.rutas-item:nth-child(2) {
-  animation-delay: 1s;
-}
-.rutas-item:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.rutas-item:nth-child(4) {
-  animation-delay: 2s;
-}
-.rutas-item:nth-child(5) {
-  animation-delay: 2.5s;
-}
+
+
+
