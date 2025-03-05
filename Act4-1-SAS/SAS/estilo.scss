@@ -1,0 +1,53 @@
+// Definir variables
+$primary-color: #4CAF50;
+$font-family: 'Arial', sans-serif;
+$background-color: #f4f4f4;
+
+// Estilos generales
+body {
+  background-color: $background-color;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+// Estilo para el encabezado
+h1 {
+  color: $primary-color;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+// Estilo para el párrafo
+p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px 15px;
+  text-align: justify;
+  margin: 50px;
+}
+
+p::first-line {
+  font-style: italic;
+  color:blue;
+}
+
+
+h1:first-child {
+  color: red;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+// Estilo para el párrafo
+p:first-child {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px 15px;
+  text-align: justify;
+  margin: 50px;
+}
